@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>
+            SIGN UP
+            <small float-right padding-right (click)="homePage()">Skip</small>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <img src="assets/imgs/logo.png" class="logo">
+    <div class="active-stage" padding>
+        <ion-row text-center>
+            <ion-col><span class="col-1"><strong class="bg-green"></strong></span></ion-col>
+            <ion-col><span class=""><strong class="bg-green"></strong></span></ion-col>
+            <ion-col><span class="col-3"><strong class="bg-green"></strong></span></ion-col>
+        </ion-row>
+    </div>
+    <br>
+    <div padding><img src="assets/imgs/atm_card.png" alt="atm_card">
+    </div>
+
+    <div>
+
+        <ion-list class="form mb-1">
+            <ion-item class="bg-light">
+                <ion-label>Card Number</ion-label>
+                <ion-input type="text" value="5886 1121 2254 2142" text-right></ion-input>
+            </ion-item>
+            <ion-row>
+                <ion-col col-6 style="border-right: 0.55px solid #c8c7cc;">
+                    <ion-item class="bg-light">
+                        <ion-label>Expiry Date</ion-label>
+                        <ion-input type="text" value="12/25" text-right></ion-input>
+                    </ion-item>
+                </ion-col>
+                <ion-col col-6>
+                    <ion-item class="bg-light">
+                        <ion-label>Expiry Date</ion-label>
+                        <ion-input type="text" value="12/25" text-right></ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+        </ion-list>
+
+        <button ion-button full class="bg-green text-white btn round shadow-green" (click)="referralcodePage()">ADD CARD</button>
+    </div>
+</ion-content>

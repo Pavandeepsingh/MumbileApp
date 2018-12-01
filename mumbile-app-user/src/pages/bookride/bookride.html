@@ -1,0 +1,69 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg-img">
+    <div class="drop">
+        <span class="text-black">Symmit
+         <ion-icon  padding-left name="ios-arrow-forward"></ion-icon>
+        </span>
+    </div>
+    <div class="pickup">
+        <span class="text-black">Newark
+         <ion-icon  padding-left name="ios-arrow-forward"></ion-icon>
+        </span>
+    </div>
+    <div class="card-box">
+        <ion-card class="text-black">
+            <ion-card-header>
+                <small float-left class="text-light">Driver Info</small>
+                <small float-right class="text-green">Cancel Ride</small>
+            </ion-card-header>
+            <ion-card-content>
+                <div class="menu heading">
+                    <ion-list>
+                        <ion-item>
+                            <ion-avatar item-start>
+                                <img src="assets/imgs/fare.png">
+                            </ion-avatar>
+                            <h2 class="text-black">
+                                Tarun Kumar
+                                <ion-icon float-right name="ios-arrow-forward"></ion-icon>
+                            </h2>
+                            <p class="text-black">4.7
+                                <span class="rateing">
+                                <ion-icon name="star" class="text-green"></ion-icon>
+                                <ion-icon name="star" class="text-green"></ion-icon>
+                                <ion-icon name="star" class="text-green"></ion-icon>
+                                <ion-icon name="star" class="text-green"></ion-icon>
+                                <ion-icon name="star" class="text-green"></ion-icon>
+                                </span>
+                            </p>
+                        </ion-item>
+                    </ion-list>
+                </div>
+                <ion-row padding class="car-details">
+                    <ion-col>
+                        <small class="text-light">Select Date</small>
+                        <strong class="text-black">DL1 ZA 5887</strong>
+                    </ion-col>
+                    <ion-col>
+                        <small class="text-light">Select Date</small>
+                        <strong class="text-black">DL1 ZA 5887</strong>
+                    </ion-col>
+                </ion-row>
+                <div text-center padding-left padding-right>
+                    <button ion-button full class="bg-green full" (click)="ridefullinfoPage()">CONTACT</button>
+
+                    <ion-icon name="ios-arrow-down" class="text-light" (click)="ridefullinfoPage()"></ion-icon>
+                </div>
+
+            </ion-card-content>
+        </ion-card>
+    </div>
+</ion-content>

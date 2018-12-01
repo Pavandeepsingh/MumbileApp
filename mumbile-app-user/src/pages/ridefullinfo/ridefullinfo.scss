@@ -1,0 +1,136 @@
+page-ridefullinfo {
+    .bg-img {
+        background: url(../../assets/imgs/home-bg.jpg);
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    .header .toolbar-background {
+        background: transparent !important;
+    }
+    .header button ion-icon {
+        color: #000000 !important;
+    }
+    .header::after {
+        display: none;
+    }
+    .header-ios .toolbar-background-ios,
+    .footer-ios .toolbar-background-ios {
+        border: none;
+    }
+    strong {
+        font-weight: 800 !important;
+    }
+    .full {
+        border-radius: 5px !important;
+    }
+    .card-box {
+        width: calc(100% - 2rem);
+        margin: 0 auto;
+        .card {
+            border-radius: 5px 5px 0 0 !important;
+        }
+        ion-card-content {
+            padding: 0 5px 5px !important;
+        }
+    }
+    .card-box {
+        .menu.heading {
+            background: none !important;
+            padding: 0 !important;
+            ion-avatar {
+                width: 45px !important;
+                height: 45px !important;
+            }
+            h2 {
+                font-size: 1.4rem;
+                font-weight: 600;
+                padding-bottom: 4px;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+        .rateing {
+            padding-left: 4px;
+            ion-icon {
+                font-size: 1.3rem !important;
+                padding: 0 2px;
+            }
+        }
+    }
+    .car-details {
+        small {
+            display: block;
+            margin-bottom: 3px;
+        }
+    }
+    .col {
+        padding: 0 !important;
+    }
+    .payment,
+    .trip-info {
+        .card {
+            border-radius: 0px 0px 0 0 !important;
+            .label {
+                margin: 0 0 18px 0 !important;
+            }
+            .item {
+                padding-left: 0px !important;
+                small {
+                    font-size: 1.2rem;
+                }
+                h6 {
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                }
+            }
+            .active-stage {
+                width: 50%;
+                max-width: 200px;
+                position: relative;
+                padding-top: 6px;
+                margin-left: 13px;
+                span {
+                    width: 20px;
+                    display: block;
+                    background: #fff;
+                    margin: auto;
+                    strong {
+                        margin: auto;
+                        display: block;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                    }
+                    &.col-2 {
+                        width: 1px;
+                        height: 43px;
+                        border-radius: 0;
+                        background: #a0a0a0;
+                    }
+                }
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: calc(100% - 50px);
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    height: 10px;
+                    background: #ccc;
+                    top: 26px;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+    .payment .row {
+        align-items: center !important;
+    }
+}

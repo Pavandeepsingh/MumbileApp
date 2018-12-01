@@ -1,0 +1,69 @@
+page-myprofile {
+    .header .toolbar-background {
+        background: transparent !important;
+    }
+    .header button ion-icon {
+        color: #fff !important;
+    }
+    .header::after {
+        display: none;
+    }
+    .header-ios .toolbar-background-ios,
+    .footer-ios .toolbar-background-ios {
+        border: none;
+    }
+    .scroll-content {
+        margin-top: 0 !important;
+        .top-side {
+            height: 230px;
+            display: block;
+            position: fixed;
+            width: 100%;
+            z-index: 9;
+            img {
+                height: 100%;
+                width: 100%;
+
+            }
+        }
+        .icon-box {
+            position: relative;
+            top: -5%;
+            z-index: 999;
+        }
+        .icon-box .icon {
+            position: absolute;
+            border-radius: 50%;
+            width: 50px;
+            font-size: 25px;
+            line-height: 50px;
+            text-align: center;
+            right: 25px;
+            top: -16px;
+        }
+
+    }
+    .form {
+        margin-top: 230px;
+        .item-inner {
+            border-bottom: 0 !important;
+            ion-input {
+                font-weight: 700;
+
+            }
+
+        }
+        .item-block:last-child {
+            border-bottom: 0 !important;
+        }
+        .item-block:first-child {
+            border-top: 0px !important;
+        }
+    }
+    .text-input {
+        margin-top: 0px !important;
+    }
+    .item {
+        margin: 6px 0 !important;
+    }
+}

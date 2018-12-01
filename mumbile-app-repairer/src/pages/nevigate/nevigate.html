@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title text-center>
+            <small float-left text-left style="margin-right: auto;">Overview</small>
+            <span style="margin: auto;" (click)="showInfo()">TARUN KUMAR</span>
+            <small float-right text-rignt style="margin-left: auto;" (click)="showInfo()">Info</small>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-img">
+    <ion-card>
+        <ion-card-content class="text-light">
+            <ion-row>
+                <ion-col col-9>
+                    <ion-list padding-left>
+                        <ion-item>
+                            <h2 class="text-black">
+                                Staight to Manhattan Ave
+                            </h2>
+                        </ion-item>
+                    </ion-list>
+                </ion-col>
+                <ion-col text-center col-3>
+                    <ion-icon name="navigate" ios="md-navigate" class="text-green"></ion-icon>
+                    <br>
+                    <small class=text-green>420 ft</small>
+                </ion-col>
+            </ion-row>
+        </ion-card-content>
+    </ion-card>
+    <div text-center padding-left padding-right class="btn-fix">
+        <div padding-left padding-right>
+            <button ion-button full class="bg-green full shadow-green btn" (click)="acceptriderPage()">ARRIVED</button>
+        </div>
+    </div>
+</ion-content>

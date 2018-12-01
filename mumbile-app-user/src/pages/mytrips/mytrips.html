@@ -1,0 +1,98 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>MY TRIPS</ion-title>
+    </ion-navbar>
+    <div class="bg-green">
+        <ion-segment [(ngModel)]="tab" padding-left padding-right>
+            <ion-segment-button value="past" class="text-white">
+                PAST
+            </ion-segment-button>
+            <ion-segment-button value="upcoming" class="text-white">
+                UPCOMING
+            </ion-segment-button>
+        </ion-segment>
+    </div>
+</ion-header>
+
+<ion-content class="bg-light">
+    <div [ngSwitch]="tab">
+        <ion-list *ngSwitchCase="'past'">
+            <ion-card>
+                <div class="img-box">
+                    <img src="assets/imgs/map.png" />
+                </div>
+                <ion-card-content>
+                    <p class="text-black">Today 8:21 am <span style="float:right;">$85 <span class="text-light">-</span> $95 </span>
+                    </p>
+                    <p class="text-light">Suzuki Swift Dezire<span style="float:right;">Cash <span class="text-black">Paid</span></span>
+                    </p>
+                </ion-card-content>
+            </ion-card>
+
+            <ion-card>
+                <div class="img-box">
+                    <img src="assets/imgs/map.png" />
+                </div>
+                <ion-card-content>
+                    <p class="text-black">Today 2:45 pm <span style="float:right;">$65.00</span>
+                    </p>
+                    <p class="text-light">Hyundai xcent<span style="float:right;">Credit Cash <span class="text-black">Paid</span></span>
+                    </p>
+                </ion-card-content>
+            </ion-card>
+
+            <ion-card>
+                <div class="img-box">
+                    <img src="assets/imgs/map.png" />
+                </div>
+                <ion-card-content>
+                    <p class="text-black">Today 2:45 pm <span style="float:right;">$65.00</span>
+                    </p>
+                    <p class="text-light">Hyundai xcent<span style="float:right;">Credit Cash <span class="text-black">Paid</span></span>
+                    </p>
+                </ion-card-content>
+            </ion-card>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'upcoming'">
+            <ion-card>
+                <div class="img-box">
+                    <img src="assets/imgs/map.png" />
+                </div>
+                <ion-card-content>
+                    <p class="text-black">Today 2:45 pm <span style="float:right;">$65.00</span>
+                    </p>
+                    <p class="text-light">Hyundai xcent<span style="float:right;">Credit Cash <span class="text-black">Paid</span></span>
+                    </p>
+                </ion-card-content>
+            </ion-card>
+
+            <ion-card>
+                <div class="img-box">
+                    <img src="assets/imgs/map.png" />
+                </div>
+                <ion-card-content>
+                    <p class="text-black">Today 8:21 am <span style="float:right;">$85 <span class="text-light">-</span> $95 </span>
+                    </p>
+                    <p class="text-light">Suzuki Swift Dezire<span style="float:right;">Cash <span class="text-black">Paid</span></span>
+                    </p>
+                </ion-card-content>
+            </ion-card>
+
+            <ion-card>
+                <div class="img-box">
+                    <img src="assets/imgs/map.png" />
+                </div>
+                <ion-card-content>
+                    <p class="text-black">Today 8:21 am <span style="float:right;">$85 <span class="text-light">-</span> $95 </span>
+                    </p>
+                    <p class="text-light">Suzuki Swift Dezire<span style="float:right;">Cash <span class="text-black">Paid</span></span>
+                    </p>
+                </ion-card-content>
+            </ion-card>
+        </ion-list>
+    </div>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "cabber",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Sign In</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <img src="assets/imgs/logo.png" class="logo">
+    <div padding>
+        <ion-list class="form">
+            <ion-item class="bg-light">
+                <ion-label>Username</ion-label>
+                <ion-input type="text" value="+91 9876543210" text-right></ion-input>
+            </ion-item>
+            <ion-item class="bg-light">
+                <ion-label>Password</ion-label>
+                <ion-input type="password" value="*******" text-right></ion-input>
+            </ion-item>
+        </ion-list>
+        <button ion-button full class="bg-green text-white btn round shadow-green" (click)="homePage()">LOGIN</button>
+    </div>
+
+    <ion-row padding-left padding-right>
+        <ion-col (click)="signupPage()"><small>New user <strong class="text-green">Sign up</strong></small></ion-col>
+        <ion-col text-right><small>Forgot <strong class="text-green">Password?</strong></small></ion-col>
+    </ion-row>
+    <p padding text-center class="option-login"><span>OR CONTINUE WITH</span></p>
+    <ion-row padding-left padding-right>
+        <ion-col><button ion-button full icon-left class="bg-blue text-white btn round shadow-blue"><ion-icon name="logo-facebook"></ion-icon>Facebook</button></ion-col>
+        <ion-col><button ion-button full icon-left class="bg-white text-dark btn round shadow-black"><ion-icon name="logo-googleplus"></ion-icon>Google</button></ion-col>
+    </ion-row>
+</ion-content>

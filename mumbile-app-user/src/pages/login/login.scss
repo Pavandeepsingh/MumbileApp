@@ -1,0 +1,42 @@
+page-login {
+    img {
+        display: block;
+        &.logo {
+            width: 25%;
+            max-width: 150px;
+            margin: 2.5rem auto;
+        }
+    }
+    .form {
+        border: 1px solid #ccc !important;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-bottom: 1.6rem;
+        ion-item {
+            border: none !important;
+            padding-left: 0 !important;
+            .item-inner {
+                padding-left: 16px;
+                ion-label {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+    .option-login {
+        position: relative;
+        &::after,
+        &::before {
+            display: block;
+            width: 50px;
+            height: 1px;
+            background: #ccc;
+            position: absolute;
+            content: "";
+            top: 25px;
+        }
+        &::after {
+            right: 16px;
+        }
+    }
+}

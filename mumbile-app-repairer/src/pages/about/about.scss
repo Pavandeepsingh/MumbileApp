@@ -1,0 +1,17 @@
+page-about {
+    .bottom {
+        position: absolute;
+        width: 100%;
+        bottom: 1rem;
+        left: 0;
+    }
+    .logo {
+        width: 60%;
+        max-width: 300px;
+        margin: auto;
+    }
+    .about {
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+}

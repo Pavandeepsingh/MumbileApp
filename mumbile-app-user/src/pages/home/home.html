@@ -1,0 +1,18 @@
+<ion-header no-border>
+    <ion-navbar transparent>
+        <button ion-button menuToggle>
+      <ion-icon name="menu" ></ion-icon>
+    </button>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<div #map id="map" class="mymap"></div> 
+    <ion-card class="search shadow-black">
+        <ion-card-content (click)="locationPage()">
+            <span class="dot"></span>
+            <ion-searchbar (ionInput)="getItems($event)" placeholder="Where to go?"></ion-searchbar>
+            <ion-icon name="md-locate" class="text-black"></ion-icon>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

@@ -1,0 +1,92 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-img">
+    <div class="drop">
+        <span class="text-black">Symmit
+                  <ion-icon  padding-left name="ios-arrow-forward"></ion-icon>
+        </span>
+    </div>
+    <div class="pickup">
+        <span class="text-black">Newark
+         <ion-icon  padding-left name="ios-arrow-forward"></ion-icon>
+        </span>
+    </div>
+    <div class="card-box">
+        <ion-card class="text-black">
+            <ion-card-header>
+
+                <small text-left class="mr-a"> 
+                    <ion-icon padding-right name="md-card" class="text-green"></ion-icon>
+                   Cash
+                </small>
+                <span text-center class="mx-a">Choose Cab Type</span>
+                <small text-right class="ml-a">
+                     <ion-icon padding-right name="md-person-add" class=text-green></ion-icon>
+                    1
+                </small>
+            </ion-card-header>
+            <ion-card-content>
+                <div class="cab-scroll bg-white">
+                    <div class="cab-container">
+                        <div class="cab-type">
+                            <div class="img-box">
+                                <img src="assets/imgs/car-1.png">
+                                <ion-badge item-end class="bg-green">2 mins</ion-badge>
+                            </div>
+                            <h4 class="text-black ">GoShare</h4>
+                            <small class="text-light ">$45 - $50</small>
+                        </div>
+                        <div class="cab-type">
+                            <div class="img-box active">
+                                <img src="assets/imgs/car-1.png">
+                                <ion-badge item-end class="bg-green">2 mins</ion-badge>
+                            </div>
+                            <h4 class="text-black ">GoMeOnly</h4>
+                            <small class="text-light ">$45 - $50</small>
+                        </div>
+                        <div class="cab-type ">
+                            <div class="img-box">
+                                <img src="assets/imgs/car-1.png">
+                                <ion-badge item-end class="bg-green">2 mins</ion-badge>
+                            </div>
+                            <h4 class="text-black ">GoBigger</h4>
+                            <small class="text-light ">$45 - $50</small>
+                        </div>
+                        <div class="cab-type ">
+                            <div class="img-box">
+                                <img src="assets/imgs/car-1.png">
+                                <ion-badge item-end class="bg-green">2 mins</ion-badge>
+                            </div>
+                            <h4 class="text-black">GoFast</h4>
+                            <small class="text-light ">$45 - $50</small>
+                        </div>
+                        <div class="cab-type ">
+                            <div class="img-box">
+                                <img src="assets/imgs/car-1.png">
+                                <ion-badge item-end class="bg-green">2 mins</ion-badge>
+                            </div>
+                            <h4 class="text-black ">GoShare</h4>
+                            <small class="text-light ">$45 - $50</small>
+                        </div>
+                    </div>
+                </div>
+                <ion-row padding-left padding-right>
+                    <ion-col col-2>
+                        <button ion-button full class="bg-green  shadow-green full"> <ion-icon name="md-time"></ion-icon></button>
+                    </ion-col>
+                    <ion-col col-10>
+                        <button ion-button full class="bg-green shadow-green full" (click)="schedulePage()">REQUEST CAB</button>
+                    </ion-col>
+                </ion-row>
+
+            </ion-card-content>
+        </ion-card>
+    </div>
+</ion-content>

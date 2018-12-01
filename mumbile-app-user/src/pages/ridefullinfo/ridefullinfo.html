@@ -1,0 +1,123 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu" ></ion-icon>
+    </button>
+
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-img">
+    <div class="card-box">
+        <ion-card class="text-black">
+            <ion-card-header>
+                <small float-left class="text-black">Driver Info</small>
+                <small float-right class="text-green">Cancel Ride</small>
+            </ion-card-header>
+            <ion-card-content>
+                <div class="menu heading">
+                    <ion-list>
+                        <ion-item>
+                            <ion-avatar item-start>
+                                <img src="assets/imgs/fare.png">
+                            </ion-avatar>
+                            <h2 class="text-black">
+                                Tarun Kumar
+                                <ion-icon float-right name="ios-arrow-forward"></ion-icon>
+                            </h2>
+                            <p class="text-black">4.7
+                                <span class="rateing">
+                                <ion-icon name="star" class="text-green"></ion-icon>
+                                <ion-icon name="star" class="text-green"></ion-icon>
+                                <ion-icon name="star" class="text-green"></ion-icon>
+                                <ion-icon name="star" class="text-green"></ion-icon>
+                                <ion-icon name="star" class="text-green"></ion-icon>
+                                </span>
+                            </p>
+                        </ion-item>
+                    </ion-list>
+                </div>
+                <ion-row padding class="car-details">
+                    <ion-col>
+                        <small class="text-light">Hyundai Wargon</small>
+                        <strong class="text-black">DL1 ZA 5887</strong>
+                    </ion-col>
+                    <ion-col text-right>
+                        <small class="text-light">Arriving in</small>
+                        <strong class="text-black">04 mins</strong>
+                    </ion-col>
+                </ion-row>
+                <div text-center padding-left padding-right padding-bottom>
+                    <button ion-button full class="bg-green full" (click)="fareratePage()">CONTACT</button>
+                </div>
+            </ion-card-content>
+        </ion-card>
+    </div>
+
+    <div class="trip-info">
+        <div class="card-box">
+            <ion-card class="text-black">
+                <ion-card-header>
+                    <small float-left class="text-black">Trip Info</small>
+                </ion-card-header>
+                <ion-card-content padding-left padding-right>
+                    <ion-row>
+                        <ion-col col-2>
+                            <div class="">
+                                <div class="active-stage">
+                                    <span class="col-1"><strong class="bg-green"></strong></span>
+                                    <span class="col-2"></span>
+                                    <span class="col-3"><strong class="bg-yellow"></strong></span>
+                                </div>
+                            </div>
+                        </ion-col>
+                        <ion-col col-10>
+                            <ion-list class="form">
+                                <ion-item class="">
+                                    <small class="text-light">From</small>
+                                    <h6 class="">Newark Ave,Journal Square,Nj</h6>
+                                </ion-item>
+                                <ion-item class="">
+                                    <small class="text-light">To</small>
+
+                                    <h6 class="text-black">Sid Ave,Journal Square,Nj</h6>
+                                </ion-item>
+                            </ion-list>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row padding-left padding-right padding-bottom class="car-details">
+                        <ion-col>
+                            <small class="text-light">Distance</small>
+                            <strong class="text-black">08 km</strong>
+                        </ion-col>
+                        <ion-col>
+                            <div text-left>
+                                <small class="text-light">Arrivial</small>
+                                <strong class="text-black">12:38 pm</strong>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                </ion-card-content>
+            </ion-card>
+        </div>
+    </div>
+
+    <div class="payment">
+        <div class="card-box">
+            <ion-card class="text-black">
+                <ion-card-content>
+                    <ion-row class="" padding>
+                        <ion-col>
+                            <small class="text-light">Payment</small>
+                            <br>
+                            <strong class="text-black">Debit Card</strong>
+                        </ion-col>
+                        <ion-col text-right>
+                            <small class="text-black">$70.00</small>
+                        </ion-col>
+                    </ion-row>
+                </ion-card-content>
+            </ion-card>
+        </div>
+    </div>
+</ion-content>

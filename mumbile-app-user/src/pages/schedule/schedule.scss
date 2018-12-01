@@ -1,0 +1,73 @@
+page-schedule {
+    .bg-img {
+        background: url(../../assets/imgs/home-bg.jpg);
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    .header .toolbar-background {
+        background: transparent !important;
+    }
+    .header button ion-icon {
+        color: #000000 !important;
+    }
+    .header::after {
+        display: none;
+    }
+    .header-ios .toolbar-background-ios,
+    .footer-ios .toolbar-background-ios {
+        border: none;
+    }
+    .pickup,
+    .drop {
+        width: 100px;
+        background: #fff;
+        padding: 7px 5px 7px 10px;
+        border-left: 8px solid #74d014;
+        border-radius: 4px;
+        font-size: 1.2rem;
+        font-weight: 500;
+        position: fixed;
+        right: 30px;
+    }
+    .pickup {
+        border-color: #fbbd00 !important;
+        left: 38px !important;
+        top: 30%;
+    }
+    .fw-5 {
+        font-weight: 500 !important;
+    }
+    .card-ios,
+    .card-md {
+        border-radius: 10px;
+    }
+    .full {
+        border-radius: 5px !important;
+    }
+    .card-header-ios {
+        font-size: 1.6rem;
+        padding-top: 2.9rem !important;
+        font-weight: 400;
+    }
+    .card-header-md {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+    .card-box {
+        position: fixed;
+        bottom: 0;
+        width: calc(100% - 2rem);
+        left: 1rem;
+        small.text-light {
+            color: #626262 !important;
+        }
+        ion-card-content {
+            padding: 0 5px 5px !important;
+        }
+    }
+}

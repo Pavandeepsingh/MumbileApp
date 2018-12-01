@@ -1,0 +1,78 @@
+<ion-menu [content]="content">
+    <ion-header>
+        <div class="menu heading">
+            <ion-list>
+                <ion-item menuClose (click)="profilePage()">
+                    <ion-avatar item-start>
+                        <img src="assets/imgs/profile_pix.png">
+                    </ion-avatar>
+                    <h2 class="text-white"><strong>Tarun Kumar</strong></h2>
+                    <p class="text-white">View Profile</p>
+                </ion-item>
+            </ion-list>
+        </div>
+    </ion-header>
+
+    <ion-content class="menu" padding>
+        <ion-list>
+            <ion-item menuClose (click)="homePage()">
+                <ion-avatar item-start>
+                    <ion-icon name="md-navigate" class="text-green"></ion-icon>
+                </ion-avatar>
+                <h2>Home</h2>
+            </ion-item>
+        </ion-list>
+        <ion-list>
+            <ion-item menuClose (click)="mytripsPage()">
+                <ion-avatar item-start>
+                    <ion-icon name="md-car" class="text-green"></ion-icon>
+                </ion-avatar>
+                <h2>My Trips</h2>
+            </ion-item>
+        </ion-list>
+        <ion-list>
+            <ion-item menuClose (click)="settingsPage()">
+                <ion-avatar item-start>
+                    <ion-icon name="md-card" class="text-green"></ion-icon>
+                </ion-avatar>
+                <h2>Payment</h2>
+            </ion-item>
+        </ion-list>
+        <ion-list>
+            <ion-item menuClose (click)="helpPage()">
+                <ion-avatar item-start>
+                    <ion-icon name="md-alert" class="text-green"></ion-icon>
+                </ion-avatar>
+                <h2>Help</h2>
+            </ion-item>
+        </ion-list>
+        <ion-list>
+            <ion-item menuClose (click)="referPage()">
+                <ion-avatar item-start>
+                    <ion-icon name="md-share" class="text-green"></ion-icon>
+                </ion-avatar>
+                <h2>Refer and Earn</h2>
+            </ion-item>
+        </ion-list>
+        <ion-list>
+            <ion-item menuClose (click)="loginPage()">
+                <ion-avatar item-start>
+                    <ion-icon name="md-power" class="text-green"></ion-icon>
+                </ion-avatar>
+                <h2>Logout</h2>
+            </ion-item>
+        </ion-list>
+        <!--
+<ion-list>
+    <ion-item menuClose (click)="referralcodePage()">
+        <ion-avatar item-start>
+        </ion-avatar>
+        <h2>Referral Code</h2>
+    </ion-item>
+</ion-list>
+-->
+    </ion-content>
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

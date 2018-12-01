@@ -1,0 +1,21 @@
+page-settings {
+    ion-card {
+        margin: 0 !important;
+        width: 100% !important;
+        h2 {
+            font-weight: 600 !important;
+            font-size: 2rem !important;
+            &.d-flex {
+                display: flex;
+                align-items: center;
+                ion-checkbox,
+                ion-toggle {
+                    margin-left: auto;
+                }
+            }
+        }
+        p {
+            color: #999 !important;
+        }
+    }
+}

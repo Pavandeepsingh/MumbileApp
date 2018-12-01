@@ -1,0 +1,7 @@
+{
+  "name": "drive",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Verification</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <img src="assets/imgs/logo.png" class="logo">
+    <div class="active-stage" padding>
+        <ion-row text-center>
+            <ion-col><span class="col-1"><strong class="bg-green"></strong></span></ion-col>
+            <ion-col><span class=""><strong class="bg-green"></strong></span></ion-col>
+            <ion-col><span class="col-3"><strong class="bg-light"></strong></span></ion-col>
+        </ion-row>
+    </div>
+    <br>
+    <p text-center padding>Enter confirmation code<br>sent to you on your SMS!</p>
+    <div padding-top>
+        <ion-list class="form">
+            <ion-item class="bg-light">
+                <ion-input type="text" value="6543210" text-center></ion-input>
+            </ion-item>
+        </ion-list>
+        <button ion-button full class="bg-green text-white btn round shadow-green" (click)="addcardPage()">NEXT</button>
+    </div>
+</ion-content>

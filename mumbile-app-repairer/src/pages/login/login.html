@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Sign In</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <img src="assets/imgs/logo.png" class="logo">
+    <div padding>
+        <ion-list class="form">
+            <ion-item class="bg-light">
+                <ion-label>Username</ion-label>
+                <ion-input type="text" value="+91 9876543210" text-right></ion-input>
+            </ion-item>
+            <ion-item class="bg-light">
+                <ion-label>Password</ion-label>
+                <ion-input type="password" value="*******" text-right></ion-input>
+            </ion-item>
+        </ion-list>
+        <button ion-button full class="bg-green text-white btn round shadow-green" (click)="tabsPage()">LOGIN</button>
+    </div>
+
+    <ion-row padding-left padding-right>
+        <ion-col>New user <strong class="text-green">Sign up</strong></ion-col>
+        <ion-col text-right>Forgot <strong class="text-green">Password?</strong></ion-col>
+    </ion-row>
+</ion-content>

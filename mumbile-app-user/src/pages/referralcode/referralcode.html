@@ -1,0 +1,35 @@
+<!--
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Referral Code</ion-title>
+    </ion-navbar>
+</ion-header>
+-->
+
+<ion-content padding>
+    <h1 text-right>
+        <ion-icon class="text-white" name="md-close" (click)="dismiss()"></ion-icon>
+    </h1>
+    <ion-card>
+        <img src="assets/imgs/menu-bg.png" />
+        <ion-card-content>
+            <div padding-top padding-right padding-left>
+                <ion-card-title class="text-green">
+                    Do you have any referral code?
+                </ion-card-title>
+                <p padding-top>
+                    Add referral code and get your <br> first cab ride free.
+                </p>
+                <ion-list class="form">
+                    <ion-item class="bg-light">
+                        <ion-input type="text" value="Add 6 digit referral code" class="text-light"></ion-input>
+                    </ion-item>
+                </ion-list>
+                <p><strong class="text-black">I Dont'have </strong><strong class="text-green" style="float: right;" (click)="homePage()">Continue</strong></p>
+            </div>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

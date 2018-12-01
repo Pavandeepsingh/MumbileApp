@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div class="top-side">
+        <img src="assets/imgs/menu-bg.png">
+        <div class="icon-box">
+            <ion-icon name="md-create" class="bg-green text-white icon"></ion-icon>
+        </div>
+    </div>
+
+    <div class="form" padding-right padding-left padding-top>
+        <ion-list>
+            <ion-item>
+                <ion-label floating>Fast Name</ion-label>
+                <ion-input type="text" value="Sumit" readonly></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Last Name</ion-label>
+                <ion-input type="text" value="Kumar" readonly></ion-input>
+            </ion-item>
+            <div class="d-flex">
+                <ion-item>
+                    <ion-label floating>Contact Number</ion-label>
+                    <ion-input type="text" value="+91 964 148 6000" readonly></ion-input>
+                </ion-item>
+                <div class="checkmark text-right">
+                    <ion-icon name="ios-checkmark-circle" class="text-green"></ion-icon>
+                </div>
+            </div>
+            <div class="d-flex">
+                <ion-item>
+                    <ion-label floating>Email Address</ion-label>
+                    <ion-input type="text" value="cabber@email.com" readonly></ion-input>
+                </ion-item>
+                <div class="checkmark text-right">
+                    <ion-icon name="ios-close-circle" class="text-red"></ion-icon>
+                </div>
+            </div>
+            <ion-item>
+                <ion-label floating>Password</ion-label>
+                <ion-input type="text" value="* * * * * *" readonly></ion-input>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>

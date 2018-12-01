@@ -1,0 +1,66 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Sign Up</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <img src="assets/imgs/logo.png" class="logo">
+    <div class="active-stage" padding>
+        <ion-row text-center>
+            <ion-col><span class="col-1"><strong class="bg-green"></strong></span></ion-col>
+            <ion-col><span class=""><strong class="bg-light"></strong></span></ion-col>
+            <ion-col><span class="col-3"><strong class="bg-light"></strong></span></ion-col>
+        </ion-row>
+    </div>
+    <div>
+        <ion-row class="rows">
+            <ion-col col-3 text-center>
+                <div class="bg-light form camra mb-1">
+                    <ion-icon name="camera" class="text-light"></ion-icon>
+                </div>
+            </ion-col>
+            <ion-col col-9>
+                <ion-list class="form mb-1">
+                    <ion-item class="bg-light">
+                        <ion-label>First Name</ion-label>
+                        <ion-input type="text" value="Tarun" text-right></ion-input>
+                    </ion-item>
+                    <ion-item class="bg-light">
+                        <ion-label>Last Name</ion-label>
+                        <ion-input type="text" value="Kumar" text-right></ion-input>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+
+        </ion-row>
+        <ion-list class="form">
+            <!--
+<ion-item class="bg-light">
+    <ion-label>Username</ion-label>
+    <ion-input type="text" value="+91 9876543210" text-right></ion-input>
+</ion-item>
+-->
+            <ion-item class="bg-light">
+                <ion-label>Create Password</ion-label>
+                <ion-input type="password" value="*******" text-right></ion-input>
+            </ion-item>
+            <ion-item class="bg-light">
+                <ion-label>Confirm Password</ion-label>
+                <ion-input type="password" value="*******" text-right></ion-input>
+            </ion-item>
+            <ion-item class="bg-light">
+                <ion-label>Phone number</ion-label>
+                <ion-input type="text" value="+91 9876543210" text-right></ion-input>
+            </ion-item>
+        </ion-list>
+        <button ion-button full class="bg-green text-white btn round shadow-green" (click)="verificationPage()">SIGN UP NOW</button>
+    </div>
+
+    <ion-row padding text-center>
+        <ion-col (click)="loginPage()">Already registered? <strong class="text-green">Sign in</strong></ion-col>
+    </ion-row>
+</ion-content>

@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            TARUN KUMAR
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+	<div #map id="map" class="mymap"></div>
+    <ion-card>
+        <ion-card-content class="text-light">
+            <div class="rider-info heading">
+                <ion-row>
+                    <ion-col col-9>
+                        <ion-list>
+                            <ion-item>
+                                <ion-avatar item-start>
+                                    <img src="assets/imgs/profile_pix.png">
+                                </ion-avatar>
+                                <small class="text-light">Drive to</small>
+                                <h2 class="text-black">
+                                    99 Fore St, Kingsbridge TQ71AB, UK
+                                </h2>
+                            </ion-item>
+                        </ion-list>
+                    </ion-col>
+                    <ion-col text-center col-3>
+                        <ion-icon name="navigate" ios="md-navigate" class="text-green"></ion-icon>
+                        <br>
+                        <small>NEVIGATE</small>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-card-content>
+    </ion-card>
+    <div text-center padding-left padding-right class="btn-fix">
+        <div padding-left padding-right>
+            <button ion-button full class="bg-red btn full shadow-red" (click)="farePage()">DOUBLE TAP END TRIP</button>
+        </div>
+    </div>
+</ion-content>

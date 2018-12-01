@@ -1,0 +1,51 @@
+page-referralcode {
+    ion-content {
+        background-color: rgba(0, 0, 0, 0.6) !important;
+    }
+    .form {
+        margin-bottom: 2.5rem;
+        margin-top: 2.5rem;
+        input {
+            font-size: 1.4rem;
+            padding: 5px;
+        }
+    }
+    .bg-img {
+        background: url(../../assets/imgs/home-bg.jpg);
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    .card {
+        border-radius: 20px;
+        width: 320px;
+        height: 455px;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    .card-title-md,
+    .card-title-ios {
+        font-weight: 700;
+        font-size: 1.4rem;
+    }
+    .list-ios>.item-block:first-child {
+        border-color: transparent !important;
+    }
+    .list-md .item-input:last-child {
+        border-color: transparent !important;
+    }
+    ion-item {
+        padding-left: 0 !important;
+        .item-inner {
+            padding-left: 16px;
+        }
+    }
+}

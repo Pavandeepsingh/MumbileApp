@@ -1,0 +1,65 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <!--        <ion-title>location</ion-title>-->
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<div #map id="map" class="mymap"></div>
+    <ion-card class="shadow-black">
+        <ion-card-content>
+            <div class="shadow-black border-radius">
+                <ion-row>
+                    <ion-col class="location-icon">
+                        <strong class="bg-green"></strong>
+                    </ion-col>
+                    <ion-col class="pad-0">
+                        <ion-item class="bg-white border-bottom">
+                            <!-- <ion-label text-right>From</ion-label> -->
+                            <ion-input type="text" class="" placeholder="location from"></ion-input>
+                            <ion-icon name="md-locate" class="text-black"></ion-icon>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col class="location-icon">
+                        <strong class="bg-yellow"></strong>
+                    </ion-col>
+                    <ion-col class="pad-0">
+                        <ion-item class="bg-white">
+                            <!--  <ion-label text-right>To</ion-label> -->
+                            <ion-input type="text" class="" placeholder="location to"></ion-input>
+                            <ion-icon name="md-locate" class="text-black"></ion-icon>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+            </div>
+            <div class="past-location" padding-top>
+                <ion-list>
+                    <ion-item class="text-light">
+                        <p>
+                            <ion-icon name="time" padding-right></ion-icon>
+                            James Avenue, Nj
+                        </p>
+                    </ion-item>
+                    <ion-item class="text-light">
+                        <p>
+                            <ion-icon name="time" padding-right></ion-icon>
+                            James Avenue, Nj
+                        </p>
+                    </ion-item>
+                    <ion-item class="text-light">
+                        <p>
+                            <ion-icon name="time" padding-right></ion-icon>
+                            James Avenue, Nj
+                        </p>
+                    </ion-item>
+                </ion-list>
+            </div>
+			<button ion-button full class="bg-green text-white btn round shadow-green" (click)="choosecabPage()">Continue</button>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

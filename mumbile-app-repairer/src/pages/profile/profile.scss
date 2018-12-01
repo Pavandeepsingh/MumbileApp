@@ -1,0 +1,41 @@
+page-profile {
+    .item {
+        border: none !important;
+        .item-inner {
+            border: none !important;
+            ion-label {
+                margin-right: 0 !important;
+            }
+            h2 {
+                font-weight: 500;
+            }
+            p {
+                font-size: 1.2rem;
+                margin-top: .5rem;
+                span {
+                    padding-right: 5px;
+                }
+            }
+        }
+        ion-avatar {
+            min-width: 50px !important;
+            min-height: 50px !important;
+            img {
+                min-width: 50px !important;
+                min-height: 50px !important;
+                border-radius: 10px !important;
+            }
+        }
+    }
+    .car-detail {
+        padding: 0;
+        .label {
+            margin: 0;
+        }
+    }
+    .menu-items {
+        ion-icon {
+            font-size: 2.5em !important;
+        }
+    }
+}
