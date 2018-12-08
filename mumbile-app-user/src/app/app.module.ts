@@ -29,6 +29,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { Geolocation } from '@ionic-native/geolocation';
 import { AndroidPermissions } from '@ionic-native/android-permissions';
 import { LoginProvider } from '../providers/login/login';
+import { HTTP } from '@ionic-native/http';
+// ionic 2 auto search
+import { AutoCompleteModule } from 'ionic2-auto-complete';
+import { ProvidersAutoCompleteProvider } from '../providers/providers-auto-complete/providers-auto-complete';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -57,7 +63,10 @@ import { LoginProvider } from '../providers/login/login';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-  ],
+    AutoCompleteModule,
+    HttpClientModule,
+       // for auto search in choose page
+  ], 
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
@@ -88,7 +97,9 @@ import { LoginProvider } from '../providers/login/login';
 	Geolocation,
 	AndroidPermissions,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    LoginProvider
+    LoginProvider,
+    HTTP,
+    ProvidersAutoCompleteProvider
   ]
 })
 export class AppModule {}

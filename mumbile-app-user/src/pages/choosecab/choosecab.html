@@ -6,9 +6,17 @@
 
     </ion-navbar>
 </ion-header>
-
 <ion-content class="bg-img">
-    <div class="drop">
+  
+    <!-- auto search start -->
+   <div class="autoSuggestBar">
+      <ion-auto-complete [dataProvider]="searchService"></ion-auto-complete>
+    </div>
+    <!-- auto search end -->
+  
+  
+    
+    <!-- <div class="drop">
         <span class="text-black">Symmit
                   <ion-icon  padding-left name="ios-arrow-forward"></ion-icon>
         </span>
@@ -17,7 +25,10 @@
         <span class="text-black">Newark
          <ion-icon  padding-left name="ios-arrow-forward"></ion-icon>
         </span>
-    </div>
+    </div> -->
+  
+
+  
     <div class="card-box">
         <ion-card class="text-black">
             <ion-card-header>
