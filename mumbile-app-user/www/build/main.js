@@ -1,15 +1,14 @@
 webpackJsonp([0],{
 
-/***/ 102:
+/***/ 137:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_login_login__ = __webpack_require__(209);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__signup_signup__ = __webpack_require__(210);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChoosecabPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_providers_auto_complete_providers_auto_complete__ = __webpack_require__(257);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__schedule_schedule__ = __webpack_require__(262);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -23,49 +22,85 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+var ChoosecabPage = (function () {
+    function ChoosecabPage(navCtrl, searchService) {
+        this.navCtrl = navCtrl;
+        this.searchService = searchService;
+    }
+    ChoosecabPage.prototype.schedulePage = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__schedule_schedule__["a" /* SchedulePage */]);
+    };
+    ChoosecabPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-choosecab',template:/*ion-inline-start:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/choosecab/choosecab.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n\n    </ion-navbar>\n</ion-header>\n<ion-content class="bg-img">\n  \n    <!-- auto search start -->\n   <div class="autoSuggestBar">\n      <ion-auto-complete [dataProvider]="searchService"></ion-auto-complete>\n    </div>\n    <!-- auto search end -->\n  \n  \n    \n    <!-- <div class="drop">\n        <span class="text-black">Symmit\n                  <ion-icon  padding-left name="ios-arrow-forward"></ion-icon>\n        </span>\n    </div>\n    <div class="pickup">\n        <span class="text-black">Newark\n         <ion-icon  padding-left name="ios-arrow-forward"></ion-icon>\n        </span>\n    </div> -->\n  \n\n  \n    <div class="card-box">\n        <ion-card class="text-black">\n            <ion-card-header>\n\n                <small text-left class="mr-a"> \n                    <ion-icon padding-right name="md-card" class="text-green"></ion-icon>\n                   Cash\n                </small>\n                <span text-center class="mx-a">Choose Cab Type</span>\n                <small text-right class="ml-a">\n                     <ion-icon padding-right name="md-person-add" class=text-green></ion-icon>\n                    1\n                </small>\n            </ion-card-header>\n            <ion-card-content>\n                <div class="cab-scroll bg-white">\n                    <div class="cab-container">\n                        <div class="cab-type">\n                            <div class="img-box">\n                                <img src="assets/imgs/car-1.png">\n                                <ion-badge item-end class="bg-green">2 mins</ion-badge>\n                            </div>\n                            <h4 class="text-black ">GoShare</h4>\n                            <small class="text-light ">$45 - $50</small>\n                        </div>\n                        <div class="cab-type">\n                            <div class="img-box active">\n                                <img src="assets/imgs/car-1.png">\n                                <ion-badge item-end class="bg-green">2 mins</ion-badge>\n                            </div>\n                            <h4 class="text-black ">GoMeOnly</h4>\n                            <small class="text-light ">$45 - $50</small>\n                        </div>\n                        <div class="cab-type ">\n                            <div class="img-box">\n                                <img src="assets/imgs/car-1.png">\n                                <ion-badge item-end class="bg-green">2 mins</ion-badge>\n                            </div>\n                            <h4 class="text-black ">GoBigger</h4>\n                            <small class="text-light ">$45 - $50</small>\n                        </div>\n                        <div class="cab-type ">\n                            <div class="img-box">\n                                <img src="assets/imgs/car-1.png">\n                                <ion-badge item-end class="bg-green">2 mins</ion-badge>\n                            </div>\n                            <h4 class="text-black">GoFast</h4>\n                            <small class="text-light ">$45 - $50</small>\n                        </div>\n                        <div class="cab-type ">\n                            <div class="img-box">\n                                <img src="assets/imgs/car-1.png">\n                                <ion-badge item-end class="bg-green">2 mins</ion-badge>\n                            </div>\n                            <h4 class="text-black ">GoShare</h4>\n                            <small class="text-light ">$45 - $50</small>\n                        </div>\n                    </div>\n                </div>\n                <ion-row padding-left padding-right>\n                    <ion-col col-2>\n                        <button ion-button full class="bg-green  shadow-green full"> <ion-icon name="md-time"></ion-icon></button>\n                    </ion-col>\n                    <ion-col col-10>\n                        <button ion-button full class="bg-green shadow-green full" (click)="schedulePage()">REQUEST CAB</button>\n                    </ion-col>\n                </ion-row>\n\n            </ion-card-content>\n        </ion-card>\n    </div>\n</ion-content>\n'/*ion-inline-end:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/choosecab/choosecab.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_providers_auto_complete_providers_auto_complete__["a" /* ProvidersAutoCompleteProvider */]])
+    ], ChoosecabPage);
+    return ChoosecabPage;
+}());
+
+//# sourceMappingURL=choosecab.js.map
+
+/***/ }),
+
+/***/ 141:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_login_login__ = __webpack_require__(268);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signup_signup__ = __webpack_require__(269);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__choosecab_choosecab__ = __webpack_require__(137);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+//import { HomePage } from '../home/home';
+
 
 var LoginPage = (function () {
     function LoginPage(navCtrl, loginProvider) {
         this.navCtrl = navCtrl;
         this.loginProvider = loginProvider;
-        this.getUsers();
     }
     LoginPage.prototype.homePage = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */]);
+        //this.navCtrl.push(HomePage);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__choosecab_choosecab__["a" /* ChoosecabPage */]);
     };
     LoginPage.prototype.signupPage = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__signup_signup__["a" /* SignupPage */]);
-    };
-    LoginPage.prototype.getUsers = function () {
-        var _this = this;
-        this.loginProvider.getUsers()
-            .then(function (data) {
-            _this.users = data;
-            console.log(_this.users);
-        });
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__signup_signup__["a" /* SignupPage */]);
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\login\login.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>Sign In</ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <img src="assets/imgs/logo.png" class="logo">\n    <div padding>\n        <ion-list class="form">\n            <ion-item class="bg-light">\n                <ion-label>Username</ion-label>\n                <ion-input type="text" value="+91 9876543210" text-right></ion-input>\n            </ion-item>\n            <ion-item class="bg-light">\n                <ion-label>Password</ion-label>\n                <ion-input type="password" value="*******" text-right></ion-input>\n            </ion-item>\n        </ion-list>\n        <button ion-button full class="bg-green text-white btn round shadow-green" (click)="homePage()">LOGIN</button>\n    </div>\n\n    <ion-row padding-left padding-right>\n        <ion-col (click)="signupPage()"><small>New user <strong class="text-green">Sign up</strong></small></ion-col>\n        <ion-col text-right><small>Forgot <strong class="text-green">Password?</strong></small></ion-col>\n    </ion-row>\n    <p padding text-center class="option-login"><span>OR CONTINUE WITH</span></p>\n    <ion-row padding-left padding-right>\n        <ion-col><button ion-button full icon-left class="bg-blue text-white btn round shadow-blue"><ion-icon name="logo-facebook"></ion-icon>Facebook</button></ion-col>\n        <ion-col><button ion-button full icon-left class="bg-white text-dark btn round shadow-black"><ion-icon name="logo-googleplus"></ion-icon>Google</button></ion-col>\n    </ion-row>\n</ion-content>\n'/*ion-inline-end:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\login\login.html"*/
+            selector: 'page-login',template:/*ion-inline-start:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/login/login.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>Sign In</ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <img src="assets/imgs/logo.png" class="logo">\n    <div padding>\n        <ion-list class="form">\n            <ion-item class="bg-light">\n                <ion-label>Username</ion-label>\n                <ion-input type="text" value="+91 9876543210" text-right></ion-input>\n            </ion-item>\n            <ion-item class="bg-light">\n                <ion-label>Password</ion-label>\n                <ion-input type="password" value="*******" text-right></ion-input>\n            </ion-item>\n        </ion-list>\n        <button ion-button full class="bg-green text-white btn round shadow-green" (click)="homePage()">LOGIN</button>\n    </div>\n\n    <ion-row padding-left padding-right>\n        <ion-col (click)="signupPage()"><small>New user <strong class="text-green">Sign up</strong></small></ion-col>\n        <ion-col text-right><small>Forgot <strong class="text-green">Password?</strong></small></ion-col>\n    </ion-row>\n    <p padding text-center class="option-login"><span>OR CONTINUE WITH</span></p>\n    <ion-row padding-left padding-right>\n        <ion-col><button ion-button full icon-left class="bg-blue text-white btn round shadow-blue"><ion-icon name="logo-facebook"></ion-icon>Facebook</button></ion-col>\n        <ion-col><button ion-button full icon-left class="bg-white text-dark btn round shadow-black"><ion-icon name="logo-googleplus"></ion-icon>Google</button></ion-col>\n    </ion-row>\n</ion-content>\n'/*ion-inline-end:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/login/login.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__providers_login_login__["a" /* LoginProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_login_login__["a" /* LoginProvider */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_login_login__["a" /* LoginProvider */]])
     ], LoginPage);
     return LoginPage;
-    var _a, _b;
 }());
 
 //# sourceMappingURL=login.js.map
 
 /***/ }),
 
-/***/ 103:
+/***/ 142:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReferralcodePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(77);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -91,7 +126,7 @@ var ReferralcodePage = (function () {
     };
     ReferralcodePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-referralcode',template:/*ion-inline-start:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\referralcode\referralcode.html"*/'<!--\n<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <ion-title>Referral Code</ion-title>\n    </ion-navbar>\n</ion-header>\n-->\n\n<ion-content padding>\n    <h1 text-right>\n        <ion-icon class="text-white" name="md-close" (click)="dismiss()"></ion-icon>\n    </h1>\n    <ion-card>\n        <img src="assets/imgs/menu-bg.png" />\n        <ion-card-content>\n            <div padding-top padding-right padding-left>\n                <ion-card-title class="text-green">\n                    Do you have any referral code?\n                </ion-card-title>\n                <p padding-top>\n                    Add referral code and get your <br> first cab ride free.\n                </p>\n                <ion-list class="form">\n                    <ion-item class="bg-light">\n                        <ion-input type="text" value="Add 6 digit referral code" class="text-light"></ion-input>\n                    </ion-item>\n                </ion-list>\n                <p><strong class="text-black">I Dont\'have </strong><strong class="text-green" style="float: right;" (click)="homePage()">Continue</strong></p>\n            </div>\n        </ion-card-content>\n    </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\referralcode\referralcode.html"*/
+            selector: 'page-referralcode',template:/*ion-inline-start:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/referralcode/referralcode.html"*/'<!--\n<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <ion-title>Referral Code</ion-title>\n    </ion-navbar>\n</ion-header>\n-->\n\n<ion-content padding>\n    <h1 text-right>\n        <ion-icon class="text-white" name="md-close" (click)="dismiss()"></ion-icon>\n    </h1>\n    <ion-card>\n        <img src="assets/imgs/menu-bg.png" />\n        <ion-card-content>\n            <div padding-top padding-right padding-left>\n                <ion-card-title class="text-green">\n                    Do you have any referral code?\n                </ion-card-title>\n                <p padding-top>\n                    Add referral code and get your <br> first cab ride free.\n                </p>\n                <ion-list class="form">\n                    <ion-item class="bg-light">\n                        <ion-input type="text" value="Add 6 digit referral code" class="text-light"></ion-input>\n                    </ion-item>\n                </ion-list>\n                <p><strong class="text-black">I Dont\'have </strong><strong class="text-green" style="float: right;" (click)="homePage()">Continue</strong></p>\n            </div>\n        </ion-card-content>\n    </ion-card>\n</ion-content>\n'/*ion-inline-end:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/referralcode/referralcode.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ViewController */]])
     ], ReferralcodePage);
@@ -102,7 +137,7 @@ var ReferralcodePage = (function () {
 
 /***/ }),
 
-/***/ 116:
+/***/ 167:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -115,11 +150,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 116;
+webpackEmptyAsyncContext.id = 167;
 
 /***/ }),
 
-/***/ 158:
+/***/ 211:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -132,20 +167,20 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 158;
+webpackEmptyAsyncContext.id = 211;
 
 /***/ }),
 
-/***/ 201:
+/***/ 256:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LocationPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__choosecab_choosecab__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_android_permissions__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__choosecab_choosecab__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_android_permissions__ = __webpack_require__(266);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -198,7 +233,7 @@ var LocationPage = (function () {
     ], LocationPage.prototype, "mapElement", void 0);
     LocationPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-location',template:/*ion-inline-start:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\location\location.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <!--        <ion-title>location</ion-title>-->\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<div #map id="map" class="mymap"></div>\n    <ion-card class="shadow-black">\n        <ion-card-content>\n            <div class="shadow-black border-radius">\n                <ion-row>\n                    <ion-col class="location-icon">\n                        <strong class="bg-green"></strong>\n                    </ion-col>\n                    <ion-col class="pad-0">\n                        <ion-item class="bg-white border-bottom">\n                            <!-- <ion-label text-right>From</ion-label> -->\n                            <ion-input type="text" class="" placeholder="location from"></ion-input>\n                            <ion-icon name="md-locate" class="text-black"></ion-icon>\n                        </ion-item>\n                    </ion-col>\n                </ion-row>\n                <ion-row>\n                    <ion-col class="location-icon">\n                        <strong class="bg-yellow"></strong>\n                    </ion-col>\n                    <ion-col class="pad-0">\n                        <ion-item class="bg-white">\n                            <!--  <ion-label text-right>To</ion-label> -->\n                            <ion-input type="text" class="" placeholder="location to"></ion-input>\n                            <ion-icon name="md-locate" class="text-black"></ion-icon>\n                        </ion-item>\n                    </ion-col>\n                </ion-row>\n            </div>\n            <div class="past-location" padding-top>\n                <ion-list>\n                    <ion-item class="text-light">\n                        <p>\n                            <ion-icon name="time" padding-right></ion-icon>\n                            James Avenue, Nj\n                        </p>\n                    </ion-item>\n                    <ion-item class="text-light">\n                        <p>\n                            <ion-icon name="time" padding-right></ion-icon>\n                            James Avenue, Nj\n                        </p>\n                    </ion-item>\n                    <ion-item class="text-light">\n                        <p>\n                            <ion-icon name="time" padding-right></ion-icon>\n                            James Avenue, Nj\n                        </p>\n                    </ion-item>\n                </ion-list>\n            </div>\n			<button ion-button full class="bg-green text-white btn round shadow-green" (click)="choosecabPage()">Continue</button>\n        </ion-card-content>\n    </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\location\location.html"*/
+            selector: 'page-location',template:/*ion-inline-start:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/location/location.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <!--        <ion-title>location</ion-title>-->\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<div #map id="map" class="mymap"></div>\n    <ion-card class="shadow-black">\n        <ion-card-content>\n            <div class="shadow-black border-radius">\n                <ion-row>\n                    <ion-col class="location-icon">\n                        <strong class="bg-green"></strong>\n                    </ion-col>\n                    <ion-col class="pad-0">\n                        <ion-item class="bg-white border-bottom">\n                            <!-- <ion-label text-right>From</ion-label> -->\n                            <ion-input type="text" class="" placeholder="location from"></ion-input>\n                            <ion-icon name="md-locate" class="text-black"></ion-icon>\n                        </ion-item>\n                    </ion-col>\n                </ion-row>\n                <ion-row>\n                    <ion-col class="location-icon">\n                        <strong class="bg-yellow"></strong>\n                    </ion-col>\n                    <ion-col class="pad-0">\n                        <ion-item class="bg-white">\n                            <!--  <ion-label text-right>To</ion-label> -->\n                            <ion-input type="text" class="" placeholder="location to"></ion-input>\n                            <ion-icon name="md-locate" class="text-black"></ion-icon>\n                        </ion-item>\n                    </ion-col>\n                </ion-row>\n            </div>\n            <div class="past-location" padding-top>\n                <ion-list>\n                    <ion-item class="text-light">\n                        <p>\n                            <ion-icon name="time" padding-right></ion-icon>\n                            James Avenue, Nj\n                        </p>\n                    </ion-item>\n                    <ion-item class="text-light">\n                        <p>\n                            <ion-icon name="time" padding-right></ion-icon>\n                            James Avenue, Nj\n                        </p>\n                    </ion-item>\n                    <ion-item class="text-light">\n                        <p>\n                            <ion-icon name="time" padding-right></ion-icon>\n                            James Avenue, Nj\n                        </p>\n                    </ion-item>\n                </ion-list>\n            </div>\n			<button ion-button full class="bg-green text-white btn round shadow-green" (click)="choosecabPage()">Continue</button>\n        </ion-card-content>\n    </ion-card>\n</ion-content>\n'/*ion-inline-end:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/location/location.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__["a" /* Geolocation */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_android_permissions__["a" /* AndroidPermissions */]])
     ], LocationPage);
@@ -209,14 +244,15 @@ var LocationPage = (function () {
 
 /***/ }),
 
-/***/ 202:
+/***/ 257:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChoosecabPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__schedule_schedule__ = __webpack_require__(203);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProvidersAutoCompleteProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__ = __webpack_require__(258);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(259);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -226,37 +262,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+//import { Http } from '@angular/http';
 
 
 
-var ChoosecabPage = (function () {
-    function ChoosecabPage(navCtrl) {
-        this.navCtrl = navCtrl;
+var ProvidersAutoCompleteProvider = (function () {
+    function ProvidersAutoCompleteProvider(http) {
+        this.http = http;
+        this.labelAttribute = "name";
     }
-    ChoosecabPage.prototype.schedulePage = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__schedule_schedule__["a" /* SchedulePage */]);
+    ProvidersAutoCompleteProvider.prototype.getResults = function (keyword) {
+        console.log('get Result for auto complete');
+        return this.http.get("https://restcountries.eu/rest/v1/name/" + keyword)
+            .map(function (result) {
+            return result.filter(function (item) { return item.name.toLowerCase().startsWith(keyword.toLowerCase()); });
+        });
     };
-    ChoosecabPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-choosecab',template:/*ion-inline-start:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\choosecab\choosecab.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="bg-img">\n\n    <div class="drop">\n\n        <span class="text-black">Symmit\n\n                  <ion-icon  padding-left name="ios-arrow-forward"></ion-icon>\n\n        </span>\n\n    </div>\n\n    <div class="pickup">\n\n        <span class="text-black">Newark\n\n         <ion-icon  padding-left name="ios-arrow-forward"></ion-icon>\n\n        </span>\n\n    </div>\n\n    <div class="card-box">\n\n        <ion-card class="text-black">\n\n            <ion-card-header>\n\n\n\n                <small text-left class="mr-a"> \n\n                    <ion-icon padding-right name="md-card" class="text-green"></ion-icon>\n\n                   Cash\n\n                </small>\n\n                <span text-center class="mx-a">Choose Cab Type</span>\n\n                <small text-right class="ml-a">\n\n                     <ion-icon padding-right name="md-person-add" class=text-green></ion-icon>\n\n                    1\n\n                </small>\n\n            </ion-card-header>\n\n            <ion-card-content>\n\n                <div class="cab-scroll bg-white">\n\n                    <div class="cab-container">\n\n                        <div class="cab-type">\n\n                            <div class="img-box">\n\n                                <img src="assets/imgs/car-1.png">\n\n                                <ion-badge item-end class="bg-green">2 mins</ion-badge>\n\n                            </div>\n\n                            <h4 class="text-black ">GoShare</h4>\n\n                            <small class="text-light ">$45 - $50</small>\n\n                        </div>\n\n                        <div class="cab-type">\n\n                            <div class="img-box active">\n\n                                <img src="assets/imgs/car-1.png">\n\n                                <ion-badge item-end class="bg-green">2 mins</ion-badge>\n\n                            </div>\n\n                            <h4 class="text-black ">GoMeOnly</h4>\n\n                            <small class="text-light ">$45 - $50</small>\n\n                        </div>\n\n                        <div class="cab-type ">\n\n                            <div class="img-box">\n\n                                <img src="assets/imgs/car-1.png">\n\n                                <ion-badge item-end class="bg-green">2 mins</ion-badge>\n\n                            </div>\n\n                            <h4 class="text-black ">GoBigger</h4>\n\n                            <small class="text-light ">$45 - $50</small>\n\n                        </div>\n\n                        <div class="cab-type ">\n\n                            <div class="img-box">\n\n                                <img src="assets/imgs/car-1.png">\n\n                                <ion-badge item-end class="bg-green">2 mins</ion-badge>\n\n                            </div>\n\n                            <h4 class="text-black">GoFast</h4>\n\n                            <small class="text-light ">$45 - $50</small>\n\n                        </div>\n\n                        <div class="cab-type ">\n\n                            <div class="img-box">\n\n                                <img src="assets/imgs/car-1.png">\n\n                                <ion-badge item-end class="bg-green">2 mins</ion-badge>\n\n                            </div>\n\n                            <h4 class="text-black ">GoShare</h4>\n\n                            <small class="text-light ">$45 - $50</small>\n\n                        </div>\n\n                    </div>\n\n                </div>\n\n                <ion-row padding-left padding-right>\n\n                    <ion-col col-2>\n\n                        <button ion-button full class="bg-green  shadow-green full"> <ion-icon name="md-time"></ion-icon></button>\n\n                    </ion-col>\n\n                    <ion-col col-10>\n\n                        <button ion-button full class="bg-green shadow-green full" (click)="schedulePage()">REQUEST CAB</button>\n\n                    </ion-col>\n\n                </ion-row>\n\n\n\n            </ion-card-content>\n\n        </ion-card>\n\n    </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\choosecab\choosecab.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
-    ], ChoosecabPage);
-    return ChoosecabPage;
+    ProvidersAutoCompleteProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
+    ], ProvidersAutoCompleteProvider);
+    return ProvidersAutoCompleteProvider;
+    var _a;
 }());
 
-//# sourceMappingURL=choosecab.js.map
+//# sourceMappingURL=providers-auto-complete.js.map
 
 /***/ }),
 
-/***/ 203:
+/***/ 262:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SchedulePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bookride_bookride__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bookride_bookride__ = __webpack_require__(263);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -278,7 +319,7 @@ var SchedulePage = (function () {
     };
     SchedulePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-schedule',template:/*ion-inline-start:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\schedule\schedule.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu" ></ion-icon>\n    </button>\n\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding class="bg-img">\n    <div class="drop">\n        <span class="text-black">Symmit\n         <ion-icon  padding-left name="ios-arrow-forward"></ion-icon>\n        </span>\n    </div>\n    <div class="pickup">\n        <span class="text-black">Newark\n         <ion-icon  padding-left name="ios-arrow-forward"></ion-icon>\n        </span>\n    </div>\n    <div class="card-box">\n        <ion-card text-center class="text-black">\n            <ion-card-header text-center class="text-black">\n                Schedule Pick Up\n            </ion-card-header>\n            <ion-card-content>\n                <small class="text-light">Select Date</small>\n                <h2 padding-bottom class="fw-5">September 17,Sunday</h2>\n                <small class="text-light">Select time</small>\n                <h2 padding-bottom class="fw-5">05:00 pm</h2>\n                <ion-row>\n                    <ion-col col-6>\n                        <button ion-button full style="float: left;" class="text-green bg-white shadow-black full">CANCEL</button>\n                    </ion-col>\n                    <ion-col col-6>\n                        <button ion-button full class="shadow-green bg-green full" style="float: right;" (click)="bookridePage()">CONIFIRM</button>\n                    </ion-col>\n                </ion-row>\n            </ion-card-content>\n        </ion-card>\n    </div>\n</ion-content>\n'/*ion-inline-end:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\schedule\schedule.html"*/
+            selector: 'page-schedule',template:/*ion-inline-start:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/schedule/schedule.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu" ></ion-icon>\n    </button>\n\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding class="bg-img">\n    <div class="drop">\n        <span class="text-black">Symmit\n         <ion-icon  padding-left name="ios-arrow-forward"></ion-icon>\n        </span>\n    </div>\n    <div class="pickup">\n        <span class="text-black">Newark\n         <ion-icon  padding-left name="ios-arrow-forward"></ion-icon>\n        </span>\n    </div>\n    <div class="card-box">\n        <ion-card text-center class="text-black">\n            <ion-card-header text-center class="text-black">\n                Schedule Pick Up\n            </ion-card-header>\n            <ion-card-content>\n                <small class="text-light">Select Date</small>\n                <h2 padding-bottom class="fw-5">September 17,Sunday</h2>\n                <small class="text-light">Select time</small>\n                <h2 padding-bottom class="fw-5">05:00 pm</h2>\n                <ion-row>\n                    <ion-col col-6>\n                        <button ion-button full style="float: left;" class="text-green bg-white shadow-black full">CANCEL</button>\n                    </ion-col>\n                    <ion-col col-6>\n                        <button ion-button full class="shadow-green bg-green full" style="float: right;" (click)="bookridePage()">CONIFIRM</button>\n                    </ion-col>\n                </ion-row>\n            </ion-card-content>\n        </ion-card>\n    </div>\n</ion-content>\n'/*ion-inline-end:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/schedule/schedule.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
     ], SchedulePage);
@@ -289,14 +330,14 @@ var SchedulePage = (function () {
 
 /***/ }),
 
-/***/ 204:
+/***/ 263:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BookridePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ridefullinfo_ridefullinfo__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ridefullinfo_ridefullinfo__ = __webpack_require__(264);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -318,7 +359,7 @@ var BookridePage = (function () {
     };
     BookridePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-bookride',template:/*ion-inline-start:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\bookride\bookride.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding class="bg-img">\n    <div class="drop">\n        <span class="text-black">Symmit\n         <ion-icon  padding-left name="ios-arrow-forward"></ion-icon>\n        </span>\n    </div>\n    <div class="pickup">\n        <span class="text-black">Newark\n         <ion-icon  padding-left name="ios-arrow-forward"></ion-icon>\n        </span>\n    </div>\n    <div class="card-box">\n        <ion-card class="text-black">\n            <ion-card-header>\n                <small float-left class="text-light">Driver Info</small>\n                <small float-right class="text-green">Cancel Ride</small>\n            </ion-card-header>\n            <ion-card-content>\n                <div class="menu heading">\n                    <ion-list>\n                        <ion-item>\n                            <ion-avatar item-start>\n                                <img src="assets/imgs/fare.png">\n                            </ion-avatar>\n                            <h2 class="text-black">\n                                Tarun Kumar\n                                <ion-icon float-right name="ios-arrow-forward"></ion-icon>\n                            </h2>\n                            <p class="text-black">4.7\n                                <span class="rateing">\n                                <ion-icon name="star" class="text-green"></ion-icon>\n                                <ion-icon name="star" class="text-green"></ion-icon>\n                                <ion-icon name="star" class="text-green"></ion-icon>\n                                <ion-icon name="star" class="text-green"></ion-icon>\n                                <ion-icon name="star" class="text-green"></ion-icon>\n                                </span>\n                            </p>\n                        </ion-item>\n                    </ion-list>\n                </div>\n                <ion-row padding class="car-details">\n                    <ion-col>\n                        <small class="text-light">Select Date</small>\n                        <strong class="text-black">DL1 ZA 5887</strong>\n                    </ion-col>\n                    <ion-col>\n                        <small class="text-light">Select Date</small>\n                        <strong class="text-black">DL1 ZA 5887</strong>\n                    </ion-col>\n                </ion-row>\n                <div text-center padding-left padding-right>\n                    <button ion-button full class="bg-green full" (click)="ridefullinfoPage()">CONTACT</button>\n\n                    <ion-icon name="ios-arrow-down" class="text-light" (click)="ridefullinfoPage()"></ion-icon>\n                </div>\n\n            </ion-card-content>\n        </ion-card>\n    </div>\n</ion-content>\n'/*ion-inline-end:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\bookride\bookride.html"*/
+            selector: 'page-bookride',template:/*ion-inline-start:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/bookride/bookride.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding class="bg-img">\n    <div class="drop">\n        <span class="text-black">Symmit\n         <ion-icon  padding-left name="ios-arrow-forward"></ion-icon>\n        </span>\n    </div>\n    <div class="pickup">\n        <span class="text-black">Newark\n         <ion-icon  padding-left name="ios-arrow-forward"></ion-icon>\n        </span>\n    </div>\n    <div class="card-box">\n        <ion-card class="text-black">\n            <ion-card-header>\n                <small float-left class="text-light">Driver Info</small>\n                <small float-right class="text-green">Cancel Ride</small>\n            </ion-card-header>\n            <ion-card-content>\n                <div class="menu heading">\n                    <ion-list>\n                        <ion-item>\n                            <ion-avatar item-start>\n                                <img src="assets/imgs/fare.png">\n                            </ion-avatar>\n                            <h2 class="text-black">\n                                Tarun Kumar\n                                <ion-icon float-right name="ios-arrow-forward"></ion-icon>\n                            </h2>\n                            <p class="text-black">4.7\n                                <span class="rateing">\n                                <ion-icon name="star" class="text-green"></ion-icon>\n                                <ion-icon name="star" class="text-green"></ion-icon>\n                                <ion-icon name="star" class="text-green"></ion-icon>\n                                <ion-icon name="star" class="text-green"></ion-icon>\n                                <ion-icon name="star" class="text-green"></ion-icon>\n                                </span>\n                            </p>\n                        </ion-item>\n                    </ion-list>\n                </div>\n                <ion-row padding class="car-details">\n                    <ion-col>\n                        <small class="text-light">Select Date</small>\n                        <strong class="text-black">DL1 ZA 5887</strong>\n                    </ion-col>\n                    <ion-col>\n                        <small class="text-light">Select Date</small>\n                        <strong class="text-black">DL1 ZA 5887</strong>\n                    </ion-col>\n                </ion-row>\n                <div text-center padding-left padding-right>\n                    <button ion-button full class="bg-green full" (click)="ridefullinfoPage()">CONTACT</button>\n\n                    <ion-icon name="ios-arrow-down" class="text-light" (click)="ridefullinfoPage()"></ion-icon>\n                </div>\n\n            </ion-card-content>\n        </ion-card>\n    </div>\n</ion-content>\n'/*ion-inline-end:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/bookride/bookride.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
     ], BookridePage);
@@ -329,14 +370,14 @@ var BookridePage = (function () {
 
 /***/ }),
 
-/***/ 205:
+/***/ 264:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RidefullinfoPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__farerate_farerate__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__farerate_farerate__ = __webpack_require__(265);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -358,7 +399,7 @@ var RidefullinfoPage = (function () {
     };
     RidefullinfoPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-ridefullinfo',template:/*ion-inline-start:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\ridefullinfo\ridefullinfo.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu" ></ion-icon>\n    </button>\n\n    </ion-navbar>\n</ion-header>\n\n<ion-content class="bg-img">\n    <div class="card-box">\n        <ion-card class="text-black">\n            <ion-card-header>\n                <small float-left class="text-black">Driver Info</small>\n                <small float-right class="text-green">Cancel Ride</small>\n            </ion-card-header>\n            <ion-card-content>\n                <div class="menu heading">\n                    <ion-list>\n                        <ion-item>\n                            <ion-avatar item-start>\n                                <img src="assets/imgs/fare.png">\n                            </ion-avatar>\n                            <h2 class="text-black">\n                                Tarun Kumar\n                                <ion-icon float-right name="ios-arrow-forward"></ion-icon>\n                            </h2>\n                            <p class="text-black">4.7\n                                <span class="rateing">\n                                <ion-icon name="star" class="text-green"></ion-icon>\n                                <ion-icon name="star" class="text-green"></ion-icon>\n                                <ion-icon name="star" class="text-green"></ion-icon>\n                                <ion-icon name="star" class="text-green"></ion-icon>\n                                <ion-icon name="star" class="text-green"></ion-icon>\n                                </span>\n                            </p>\n                        </ion-item>\n                    </ion-list>\n                </div>\n                <ion-row padding class="car-details">\n                    <ion-col>\n                        <small class="text-light">Hyundai Wargon</small>\n                        <strong class="text-black">DL1 ZA 5887</strong>\n                    </ion-col>\n                    <ion-col text-right>\n                        <small class="text-light">Arriving in</small>\n                        <strong class="text-black">04 mins</strong>\n                    </ion-col>\n                </ion-row>\n                <div text-center padding-left padding-right padding-bottom>\n                    <button ion-button full class="bg-green full" (click)="fareratePage()">CONTACT</button>\n                </div>\n            </ion-card-content>\n        </ion-card>\n    </div>\n\n    <div class="trip-info">\n        <div class="card-box">\n            <ion-card class="text-black">\n                <ion-card-header>\n                    <small float-left class="text-black">Trip Info</small>\n                </ion-card-header>\n                <ion-card-content padding-left padding-right>\n                    <ion-row>\n                        <ion-col col-2>\n                            <div class="">\n                                <div class="active-stage">\n                                    <span class="col-1"><strong class="bg-green"></strong></span>\n                                    <span class="col-2"></span>\n                                    <span class="col-3"><strong class="bg-yellow"></strong></span>\n                                </div>\n                            </div>\n                        </ion-col>\n                        <ion-col col-10>\n                            <ion-list class="form">\n                                <ion-item class="">\n                                    <small class="text-light">From</small>\n                                    <h6 class="">Newark Ave,Journal Square,Nj</h6>\n                                </ion-item>\n                                <ion-item class="">\n                                    <small class="text-light">To</small>\n\n                                    <h6 class="text-black">Sid Ave,Journal Square,Nj</h6>\n                                </ion-item>\n                            </ion-list>\n                        </ion-col>\n                    </ion-row>\n                    <ion-row padding-left padding-right padding-bottom class="car-details">\n                        <ion-col>\n                            <small class="text-light">Distance</small>\n                            <strong class="text-black">08 km</strong>\n                        </ion-col>\n                        <ion-col>\n                            <div text-left>\n                                <small class="text-light">Arrivial</small>\n                                <strong class="text-black">12:38 pm</strong>\n                            </div>\n                        </ion-col>\n                    </ion-row>\n                </ion-card-content>\n            </ion-card>\n        </div>\n    </div>\n\n    <div class="payment">\n        <div class="card-box">\n            <ion-card class="text-black">\n                <ion-card-content>\n                    <ion-row class="" padding>\n                        <ion-col>\n                            <small class="text-light">Payment</small>\n                            <br>\n                            <strong class="text-black">Debit Card</strong>\n                        </ion-col>\n                        <ion-col text-right>\n                            <small class="text-black">$70.00</small>\n                        </ion-col>\n                    </ion-row>\n                </ion-card-content>\n            </ion-card>\n        </div>\n    </div>\n</ion-content>\n'/*ion-inline-end:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\ridefullinfo\ridefullinfo.html"*/
+            selector: 'page-ridefullinfo',template:/*ion-inline-start:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/ridefullinfo/ridefullinfo.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu" ></ion-icon>\n    </button>\n\n    </ion-navbar>\n</ion-header>\n\n<ion-content class="bg-img">\n    <div class="card-box">\n        <ion-card class="text-black">\n            <ion-card-header>\n                <small float-left class="text-black">Driver Info</small>\n                <small float-right class="text-green">Cancel Ride</small>\n            </ion-card-header>\n            <ion-card-content>\n                <div class="menu heading">\n                    <ion-list>\n                        <ion-item>\n                            <ion-avatar item-start>\n                                <img src="assets/imgs/fare.png">\n                            </ion-avatar>\n                            <h2 class="text-black">\n                                Tarun Kumar\n                                <ion-icon float-right name="ios-arrow-forward"></ion-icon>\n                            </h2>\n                            <p class="text-black">4.7\n                                <span class="rateing">\n                                <ion-icon name="star" class="text-green"></ion-icon>\n                                <ion-icon name="star" class="text-green"></ion-icon>\n                                <ion-icon name="star" class="text-green"></ion-icon>\n                                <ion-icon name="star" class="text-green"></ion-icon>\n                                <ion-icon name="star" class="text-green"></ion-icon>\n                                </span>\n                            </p>\n                        </ion-item>\n                    </ion-list>\n                </div>\n                <ion-row padding class="car-details">\n                    <ion-col>\n                        <small class="text-light">Hyundai Wargon</small>\n                        <strong class="text-black">DL1 ZA 5887</strong>\n                    </ion-col>\n                    <ion-col text-right>\n                        <small class="text-light">Arriving in</small>\n                        <strong class="text-black">04 mins</strong>\n                    </ion-col>\n                </ion-row>\n                <div text-center padding-left padding-right padding-bottom>\n                    <button ion-button full class="bg-green full" (click)="fareratePage()">CONTACT</button>\n                </div>\n            </ion-card-content>\n        </ion-card>\n    </div>\n\n    <div class="trip-info">\n        <div class="card-box">\n            <ion-card class="text-black">\n                <ion-card-header>\n                    <small float-left class="text-black">Trip Info</small>\n                </ion-card-header>\n                <ion-card-content padding-left padding-right>\n                    <ion-row>\n                        <ion-col col-2>\n                            <div class="">\n                                <div class="active-stage">\n                                    <span class="col-1"><strong class="bg-green"></strong></span>\n                                    <span class="col-2"></span>\n                                    <span class="col-3"><strong class="bg-yellow"></strong></span>\n                                </div>\n                            </div>\n                        </ion-col>\n                        <ion-col col-10>\n                            <ion-list class="form">\n                                <ion-item class="">\n                                    <small class="text-light">From</small>\n                                    <h6 class="">Newark Ave,Journal Square,Nj</h6>\n                                </ion-item>\n                                <ion-item class="">\n                                    <small class="text-light">To</small>\n\n                                    <h6 class="text-black">Sid Ave,Journal Square,Nj</h6>\n                                </ion-item>\n                            </ion-list>\n                        </ion-col>\n                    </ion-row>\n                    <ion-row padding-left padding-right padding-bottom class="car-details">\n                        <ion-col>\n                            <small class="text-light">Distance</small>\n                            <strong class="text-black">08 km</strong>\n                        </ion-col>\n                        <ion-col>\n                            <div text-left>\n                                <small class="text-light">Arrivial</small>\n                                <strong class="text-black">12:38 pm</strong>\n                            </div>\n                        </ion-col>\n                    </ion-row>\n                </ion-card-content>\n            </ion-card>\n        </div>\n    </div>\n\n    <div class="payment">\n        <div class="card-box">\n            <ion-card class="text-black">\n                <ion-card-content>\n                    <ion-row class="" padding>\n                        <ion-col>\n                            <small class="text-light">Payment</small>\n                            <br>\n                            <strong class="text-black">Debit Card</strong>\n                        </ion-col>\n                        <ion-col text-right>\n                            <small class="text-black">$70.00</small>\n                        </ion-col>\n                    </ion-row>\n                </ion-card-content>\n            </ion-card>\n        </div>\n    </div>\n</ion-content>\n'/*ion-inline-end:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/ridefullinfo/ridefullinfo.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
     ], RidefullinfoPage);
@@ -369,13 +410,13 @@ var RidefullinfoPage = (function () {
 
 /***/ }),
 
-/***/ 206:
+/***/ 265:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FareratePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -393,7 +434,7 @@ var FareratePage = (function () {
     }
     FareratePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-farerate',template:/*ion-inline-start:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\farerate\farerate.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <ion-title>RECEIPT</ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content class="bg-light">\n    <div class="bg-white recipt" text-center>\n        <h6>Fare Summery</h6>\n        <div class="outline bg-green"></div>\n\n        <h1 class="text-black">$23.00</h1>\n        <p>22 Oct, 2017, 12:30</p>\n\n\n        <ion-list>\n            <ion-item>\n                <ion-avatar item-start>\n                    <img src="assets/imgs/fare.png">\n                </ion-avatar>\n                <p class="text-black">Rate now</p>\n                <h2 class="text-black"><strong>TARUN KUMAR</strong></h2>\n            </ion-item>\n        </ion-list>\n    </div>\n    <div class="rateing" padding margin text-center>\n        <ion-icon name="star" class=""></ion-icon>\n        <ion-icon name="star" class=""></ion-icon>\n        <ion-icon name="star" class=""></ion-icon>\n        <ion-icon name="star" class=""></ion-icon>\n        <ion-icon name="star" class=""></ion-icon>\n    </div>\n    <div padding-left padding-right margin>\n        <button ion-button full class="bg-red text-white btn round shadow-red">SUBMIT RATING</button>\n    </div>\n</ion-content>\n'/*ion-inline-end:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\farerate\farerate.html"*/
+            selector: 'page-farerate',template:/*ion-inline-start:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/farerate/farerate.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <ion-title>RECEIPT</ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content class="bg-light">\n    <div class="bg-white recipt" text-center>\n        <h6>Fare Summery</h6>\n        <div class="outline bg-green"></div>\n\n        <h1 class="text-black">$23.00</h1>\n        <p>22 Oct, 2017, 12:30</p>\n\n\n        <ion-list>\n            <ion-item>\n                <ion-avatar item-start>\n                    <img src="assets/imgs/fare.png">\n                </ion-avatar>\n                <p class="text-black">Rate now</p>\n                <h2 class="text-black"><strong>TARUN KUMAR</strong></h2>\n            </ion-item>\n        </ion-list>\n    </div>\n    <div class="rateing" padding margin text-center>\n        <ion-icon name="star" class=""></ion-icon>\n        <ion-icon name="star" class=""></ion-icon>\n        <ion-icon name="star" class=""></ion-icon>\n        <ion-icon name="star" class=""></ion-icon>\n        <ion-icon name="star" class=""></ion-icon>\n    </div>\n    <div padding-left padding-right margin>\n        <button ion-button full class="bg-red text-white btn round shadow-red">SUBMIT RATING</button>\n    </div>\n</ion-content>\n'/*ion-inline-end:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/farerate/farerate.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
     ], FareratePage);
@@ -404,13 +445,13 @@ var FareratePage = (function () {
 
 /***/ }),
 
-/***/ 208:
+/***/ 267:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -449,7 +490,7 @@ var ListPage = (function () {
     };
     ListPage = ListPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-list',template:/*ion-inline-start:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\list\list.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>List</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">\n      <ion-icon [name]="item.icon" item-start></ion-icon>\n      {{item.title}}\n      <div class="item-note" item-end>\n        {{item.note}}\n      </div>\n    </button>\n  </ion-list>\n  <div *ngIf="selectedItem" padding>\n    You navigated here from <b>{{selectedItem.title}}</b>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\list\list.html"*/
+            selector: 'page-list',template:/*ion-inline-start:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/list/list.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>List</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">\n      <ion-icon [name]="item.icon" item-start></ion-icon>\n      {{item.title}}\n      <div class="item-note" item-end>\n        {{item.note}}\n      </div>\n    </button>\n  </ion-list>\n  <div *ngIf="selectedItem" padding>\n    You navigated here from <b>{{selectedItem.title}}</b>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/list/list.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], ListPage);
@@ -461,13 +502,12 @@ var ListPage = (function () {
 
 /***/ }),
 
-/***/ 209:
+/***/ 268:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(291);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -478,44 +518,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-
 var LoginProvider = (function () {
-    function LoginProvider(http) {
-        this.http = http;
-        this.apiUrl = 'https://jsonplaceholder.typicode.com';
-        console.log('Hello LoginProvider Provider');
+    function LoginProvider() {
+        this.apiUrl = 'https://jsonplaceholder.typicode.com/';
     }
-    LoginProvider.prototype.getUsers = function () {
-        var _this = this;
-        return new Promise(function (resolve) {
-            _this.http.get(_this.apiUrl + '/users').retry(3).subscribe(function (data) {
-                resolve(data);
-            }, function (err) {
-                console.log(err);
-            });
-        });
-    };
     LoginProvider = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [])
     ], LoginProvider);
     return LoginProvider;
-    var _a;
 }());
 
 //# sourceMappingURL=login.js.map
 
 /***/ }),
 
-/***/ 210:
+/***/ 269:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignupPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__verification_verification__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_login__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__verification_verification__ = __webpack_require__(270);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_login__ = __webpack_require__(141);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -541,7 +567,7 @@ var SignupPage = (function () {
     };
     SignupPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-signup',template:/*ion-inline-start:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\signup\signup.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <ion-title>Sign Up</ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <img src="assets/imgs/logo.png" class="logo">\n    <div class="active-stage" padding>\n        <ion-row text-center>\n            <ion-col><span class="col-1"><strong class="bg-green"></strong></span></ion-col>\n            <ion-col><span class=""><strong class="bg-light"></strong></span></ion-col>\n            <ion-col><span class="col-3"><strong class="bg-light"></strong></span></ion-col>\n        </ion-row>\n    </div>\n    <div>\n        <ion-row class="rows">\n            <ion-col col-3 text-center>\n                <div class="bg-light form camra mb-1">\n                    <ion-icon name="camera" class="text-light"></ion-icon>\n                </div>\n            </ion-col>\n            <ion-col col-9>\n                <ion-list class="form mb-1">\n                    <ion-item class="bg-light">\n                        <ion-label>First Name</ion-label>\n                        <ion-input type="text" value="Tarun" text-right></ion-input>\n                    </ion-item>\n                    <ion-item class="bg-light">\n                        <ion-label>Last Name</ion-label>\n                        <ion-input type="text" value="Kumar" text-right></ion-input>\n                    </ion-item>\n                </ion-list>\n            </ion-col>\n\n        </ion-row>\n        <ion-list class="form">\n            <!--\n<ion-item class="bg-light">\n    <ion-label>Username</ion-label>\n    <ion-input type="text" value="+91 9876543210" text-right></ion-input>\n</ion-item>\n-->\n            <ion-item class="bg-light">\n                <ion-label>Create Password</ion-label>\n                <ion-input type="password" value="*******" text-right></ion-input>\n            </ion-item>\n            <ion-item class="bg-light">\n                <ion-label>Confirm Password</ion-label>\n                <ion-input type="password" value="*******" text-right></ion-input>\n            </ion-item>\n            <ion-item class="bg-light">\n                <ion-label>Phone number</ion-label>\n                <ion-input type="text" value="+91 9876543210" text-right></ion-input>\n            </ion-item>\n        </ion-list>\n        <button ion-button full class="bg-green text-white btn round shadow-green" (click)="verificationPage()">SIGN UP NOW</button>\n    </div>\n\n    <ion-row padding text-center>\n        <ion-col (click)="loginPage()">Already registered? <strong class="text-green">Sign in</strong></ion-col>\n    </ion-row>\n</ion-content>\n'/*ion-inline-end:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\signup\signup.html"*/
+            selector: 'page-signup',template:/*ion-inline-start:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/signup/signup.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <ion-title>Sign Up</ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <img src="assets/imgs/logo.png" class="logo">\n    <div class="active-stage" padding>\n        <ion-row text-center>\n            <ion-col><span class="col-1"><strong class="bg-green"></strong></span></ion-col>\n            <ion-col><span class=""><strong class="bg-light"></strong></span></ion-col>\n            <ion-col><span class="col-3"><strong class="bg-light"></strong></span></ion-col>\n        </ion-row>\n    </div>\n    <div>\n        <ion-row class="rows">\n            <ion-col col-3 text-center>\n                <div class="bg-light form camra mb-1">\n                    <ion-icon name="camera" class="text-light"></ion-icon>\n                </div>\n            </ion-col>\n            <ion-col col-9>\n                <ion-list class="form mb-1">\n                    <ion-item class="bg-light">\n                        <ion-label>First Name</ion-label>\n                        <ion-input type="text" value="Tarun" text-right></ion-input>\n                    </ion-item>\n                    <ion-item class="bg-light">\n                        <ion-label>Last Name</ion-label>\n                        <ion-input type="text" value="Kumar" text-right></ion-input>\n                    </ion-item>\n                </ion-list>\n            </ion-col>\n\n        </ion-row>\n        <ion-list class="form">\n            <!--\n<ion-item class="bg-light">\n    <ion-label>Username</ion-label>\n    <ion-input type="text" value="+91 9876543210" text-right></ion-input>\n</ion-item>\n-->\n            <ion-item class="bg-light">\n                <ion-label>Create Password</ion-label>\n                <ion-input type="password" value="*******" text-right></ion-input>\n            </ion-item>\n            <ion-item class="bg-light">\n                <ion-label>Confirm Password</ion-label>\n                <ion-input type="password" value="*******" text-right></ion-input>\n            </ion-item>\n            <ion-item class="bg-light">\n                <ion-label>Phone number</ion-label>\n                <ion-input type="text" value="+91 9876543210" text-right></ion-input>\n            </ion-item>\n        </ion-list>\n        <button ion-button full class="bg-green text-white btn round shadow-green" (click)="verificationPage()">SIGN UP NOW</button>\n    </div>\n\n    <ion-row padding text-center>\n        <ion-col (click)="loginPage()">Already registered? <strong class="text-green">Sign in</strong></ion-col>\n    </ion-row>\n</ion-content>\n'/*ion-inline-end:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/signup/signup.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
     ], SignupPage);
@@ -552,14 +578,14 @@ var SignupPage = (function () {
 
 /***/ }),
 
-/***/ 211:
+/***/ 270:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VerificationPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__addcard_addcard__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__addcard_addcard__ = __webpack_require__(271);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -581,7 +607,7 @@ var VerificationPage = (function () {
     };
     VerificationPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-verification',template:/*ion-inline-start:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\verification\verification.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <ion-title>Verification</ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <img src="assets/imgs/logo.png" class="logo">\n    <div class="active-stage" padding>\n        <ion-row text-center>\n            <ion-col><span class="col-1"><strong class="bg-green"></strong></span></ion-col>\n            <ion-col><span class=""><strong class="bg-green"></strong></span></ion-col>\n            <ion-col><span class="col-3"><strong class="bg-light"></strong></span></ion-col>\n        </ion-row>\n    </div>\n    <br>\n    <p text-center padding>Enter confirmation code<br>sent to you on your SMS!</p>\n    <div padding-top>\n        <ion-list class="form">\n            <ion-item class="bg-light">\n                <ion-input type="text" value="6543210" text-center></ion-input>\n            </ion-item>\n        </ion-list>\n        <button ion-button full class="bg-green text-white btn round shadow-green" (click)="addcardPage()">NEXT</button>\n    </div>\n</ion-content>\n'/*ion-inline-end:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\verification\verification.html"*/
+            selector: 'page-verification',template:/*ion-inline-start:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/verification/verification.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <ion-title>Verification</ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <img src="assets/imgs/logo.png" class="logo">\n    <div class="active-stage" padding>\n        <ion-row text-center>\n            <ion-col><span class="col-1"><strong class="bg-green"></strong></span></ion-col>\n            <ion-col><span class=""><strong class="bg-green"></strong></span></ion-col>\n            <ion-col><span class="col-3"><strong class="bg-light"></strong></span></ion-col>\n        </ion-row>\n    </div>\n    <br>\n    <p text-center padding>Enter confirmation code<br>sent to you on your SMS!</p>\n    <div padding-top>\n        <ion-list class="form">\n            <ion-item class="bg-light">\n                <ion-input type="text" value="6543210" text-center></ion-input>\n            </ion-item>\n        </ion-list>\n        <button ion-button full class="bg-green text-white btn round shadow-green" (click)="addcardPage()">NEXT</button>\n    </div>\n</ion-content>\n'/*ion-inline-end:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/verification/verification.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
     ], VerificationPage);
@@ -592,15 +618,15 @@ var VerificationPage = (function () {
 
 /***/ }),
 
-/***/ 212:
+/***/ 271:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddcardPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__referralcode_referralcode__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__referralcode_referralcode__ = __webpack_require__(142);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -628,7 +654,7 @@ var AddcardPage = (function () {
     };
     AddcardPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addcard',template:/*ion-inline-start:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\addcard\addcard.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <ion-title>\n            SIGN UP\n            <small float-right padding-right (click)="homePage()">Skip</small>\n        </ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <img src="assets/imgs/logo.png" class="logo">\n    <div class="active-stage" padding>\n        <ion-row text-center>\n            <ion-col><span class="col-1"><strong class="bg-green"></strong></span></ion-col>\n            <ion-col><span class=""><strong class="bg-green"></strong></span></ion-col>\n            <ion-col><span class="col-3"><strong class="bg-green"></strong></span></ion-col>\n        </ion-row>\n    </div>\n    <br>\n    <div padding><img src="assets/imgs/atm_card.png" alt="atm_card">\n    </div>\n\n    <div>\n\n        <ion-list class="form mb-1">\n            <ion-item class="bg-light">\n                <ion-label>Card Number</ion-label>\n                <ion-input type="text" value="5886 1121 2254 2142" text-right></ion-input>\n            </ion-item>\n            <ion-row>\n                <ion-col col-6 style="border-right: 0.55px solid #c8c7cc;">\n                    <ion-item class="bg-light">\n                        <ion-label>Expiry Date</ion-label>\n                        <ion-input type="text" value="12/25" text-right></ion-input>\n                    </ion-item>\n                </ion-col>\n                <ion-col col-6>\n                    <ion-item class="bg-light">\n                        <ion-label>Expiry Date</ion-label>\n                        <ion-input type="text" value="12/25" text-right></ion-input>\n                    </ion-item>\n                </ion-col>\n            </ion-row>\n        </ion-list>\n\n        <button ion-button full class="bg-green text-white btn round shadow-green" (click)="referralcodePage()">ADD CARD</button>\n    </div>\n</ion-content>\n'/*ion-inline-end:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\addcard\addcard.html"*/
+            selector: 'page-addcard',template:/*ion-inline-start:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/addcard/addcard.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <ion-title>\n            SIGN UP\n            <small float-right padding-right (click)="homePage()">Skip</small>\n        </ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <img src="assets/imgs/logo.png" class="logo">\n    <div class="active-stage" padding>\n        <ion-row text-center>\n            <ion-col><span class="col-1"><strong class="bg-green"></strong></span></ion-col>\n            <ion-col><span class=""><strong class="bg-green"></strong></span></ion-col>\n            <ion-col><span class="col-3"><strong class="bg-green"></strong></span></ion-col>\n        </ion-row>\n    </div>\n    <br>\n    <div padding><img src="assets/imgs/atm_card.png" alt="atm_card">\n    </div>\n\n    <div>\n\n        <ion-list class="form mb-1">\n            <ion-item class="bg-light">\n                <ion-label>Card Number</ion-label>\n                <ion-input type="text" value="5886 1121 2254 2142" text-right></ion-input>\n            </ion-item>\n            <ion-row>\n                <ion-col col-6 style="border-right: 0.55px solid #c8c7cc;">\n                    <ion-item class="bg-light">\n                        <ion-label>Expiry Date</ion-label>\n                        <ion-input type="text" value="12/25" text-right></ion-input>\n                    </ion-item>\n                </ion-col>\n                <ion-col col-6>\n                    <ion-item class="bg-light">\n                        <ion-label>Expiry Date</ion-label>\n                        <ion-input type="text" value="12/25" text-right></ion-input>\n                    </ion-item>\n                </ion-col>\n            </ion-row>\n        </ion-list>\n\n        <button ion-button full class="bg-green text-white btn round shadow-green" (click)="referralcodePage()">ADD CARD</button>\n    </div>\n</ion-content>\n'/*ion-inline-end:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/addcard/addcard.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* ModalController */]])
     ], AddcardPage);
@@ -639,13 +665,13 @@ var AddcardPage = (function () {
 
 /***/ }),
 
-/***/ 213:
+/***/ 272:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -663,7 +689,7 @@ var SettingsPage = (function () {
     }
     SettingsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-settings',template:/*ion-inline-start:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\settings\settings.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <ion-title>PAYMENTS</ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content class="bg-light">\n    <p class="text-light" padding>Payment Methods</p>\n    <ion-card>\n        <ion-item>\n            <ion-avatar item-start>\n                <img src="assets/imgs/icon_cash.png">\n            </ion-avatar>\n            <h1><strong>Cash</strong></h1>\n            <p class="text-light"><small>Pay with cash While Drive Show you amount</small></p>\n        </ion-item>\n    </ion-card>\n    <ion-card>\n        <ion-item>\n            <ion-avatar item-start>\n                <img src="assets/imgs/icon_card.png">\n            </ion-avatar>\n            <h1><strong>Cards</strong></h1>\n            <p class="text-light"><small>Add Credit or Card and pay while booking cab.</small></p>\n        </ion-item>\n    </ion-card>\n    <ion-card>\n        <ion-item>\n            <ion-avatar item-start>\n                <img src="assets/imgs/icon-paytm.png">\n            </ion-avatar>\n            <h1><strong>PayTm</strong></h1>\n            <p class="text-light"><small>Pay directly from your PayTm Wallet.</small></p>\n        </ion-item>\n    </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\settings\settings.html"*/
+            selector: 'page-settings',template:/*ion-inline-start:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/settings/settings.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <ion-title>PAYMENTS</ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content class="bg-light">\n    <p class="text-light" padding>Payment Methods</p>\n    <ion-card>\n        <ion-item>\n            <ion-avatar item-start>\n                <img src="assets/imgs/icon_cash.png">\n            </ion-avatar>\n            <h1><strong>Cash</strong></h1>\n            <p class="text-light"><small>Pay with cash While Drive Show you amount</small></p>\n        </ion-item>\n    </ion-card>\n    <ion-card>\n        <ion-item>\n            <ion-avatar item-start>\n                <img src="assets/imgs/icon_card.png">\n            </ion-avatar>\n            <h1><strong>Cards</strong></h1>\n            <p class="text-light"><small>Add Credit or Card and pay while booking cab.</small></p>\n        </ion-item>\n    </ion-card>\n    <ion-card>\n        <ion-item>\n            <ion-avatar item-start>\n                <img src="assets/imgs/icon-paytm.png">\n            </ion-avatar>\n            <h1><strong>PayTm</strong></h1>\n            <p class="text-light"><small>Pay directly from your PayTm Wallet.</small></p>\n        </ion-item>\n    </ion-card>\n</ion-content>\n'/*ion-inline-end:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/settings/settings.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
     ], SettingsPage);
@@ -674,13 +700,13 @@ var SettingsPage = (function () {
 
 /***/ }),
 
-/***/ 214:
+/***/ 273:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HelpPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -698,7 +724,7 @@ var HelpPage = (function () {
     }
     HelpPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-help',template:/*ion-inline-start:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\help\help.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <ion-title>HELP</ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content class="bg-light">\n    <p class="text-light" padding>choose your issue</p>\n    <ion-card>\n        <ion-card-header>\n            <h1><strong>Trips and fare</strong>\n                <ion-icon name="ios-arrow-down-outline" class="text-light"></ion-icon>\n            </h1>\n        </ion-card-header>\n        <ion-card-content class="text-light">\n            <small>Any issue regarding your trip and fare</small>\n        </ion-card-content>\n    </ion-card>\n    <ion-card>\n        <ion-card-header>\n            <h1><strong>Payment</strong>\n                <ion-icon name="ios-arrow-down-outline" class="text-light"></ion-icon>\n            </h1>\n        </ion-card-header>\n        <ion-card-content class="text-light">\n            <small>problim while paying fare or related issue</small>\n        </ion-card-content>\n    </ion-card>\n    <ion-card>\n        <ion-card-header>\n            <h1><strong>App Usability</strong>\n                <ion-icon name="ios-arrow-down-outline" class="text-light"></ion-icon>\n            </h1>\n        </ion-card-header>\n        <ion-card-content class="text-light">\n            <small>Any issue while using our App</small>\n        </ion-card-content>\n    </ion-card>\n    <ion-card>\n        <ion-card-header>\n            <h1><strong>Account</strong>\n                <ion-icon name="ios-arrow-down-outline" class="text-light"></ion-icon>\n            </h1>\n        </ion-card-header>\n        <ion-card-content class="text-light">\n            <small>your account info can\'t change details or change Password .</small>\n        </ion-card-content>\n    </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\help\help.html"*/
+            selector: 'page-help',template:/*ion-inline-start:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/help/help.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <ion-title>HELP</ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content class="bg-light">\n    <p class="text-light" padding>choose your issue</p>\n    <ion-card>\n        <ion-card-header>\n            <h1><strong>Trips and fare</strong>\n                <ion-icon name="ios-arrow-down-outline" class="text-light"></ion-icon>\n            </h1>\n        </ion-card-header>\n        <ion-card-content class="text-light">\n            <small>Any issue regarding your trip and fare</small>\n        </ion-card-content>\n    </ion-card>\n    <ion-card>\n        <ion-card-header>\n            <h1><strong>Payment</strong>\n                <ion-icon name="ios-arrow-down-outline" class="text-light"></ion-icon>\n            </h1>\n        </ion-card-header>\n        <ion-card-content class="text-light">\n            <small>problim while paying fare or related issue</small>\n        </ion-card-content>\n    </ion-card>\n    <ion-card>\n        <ion-card-header>\n            <h1><strong>App Usability</strong>\n                <ion-icon name="ios-arrow-down-outline" class="text-light"></ion-icon>\n            </h1>\n        </ion-card-header>\n        <ion-card-content class="text-light">\n            <small>Any issue while using our App</small>\n        </ion-card-content>\n    </ion-card>\n    <ion-card>\n        <ion-card-header>\n            <h1><strong>Account</strong>\n                <ion-icon name="ios-arrow-down-outline" class="text-light"></ion-icon>\n            </h1>\n        </ion-card-header>\n        <ion-card-content class="text-light">\n            <small>your account info can\'t change details or change Password .</small>\n        </ion-card-content>\n    </ion-card>\n</ion-content>\n'/*ion-inline-end:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/help/help.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
     ], HelpPage);
@@ -709,13 +735,13 @@ var HelpPage = (function () {
 
 /***/ }),
 
-/***/ 215:
+/***/ 274:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfilePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -733,7 +759,7 @@ var ProfilePage = (function () {
     }
     ProfilePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-profile',template:/*ion-inline-start:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\profile\profile.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <div class="top-side">\n        <img src="assets/imgs/menu-bg.png">\n        <div class="icon-box">\n            <ion-icon name="md-create" class="bg-green text-white icon"></ion-icon>\n        </div>\n    </div>\n\n    <div class="form" padding-right padding-left padding-top>\n        <ion-list>\n            <ion-item>\n                <ion-label floating>Fast Name</ion-label>\n                <ion-input type="text" value="Sumit" readonly></ion-input>\n            </ion-item>\n            <ion-item>\n                <ion-label floating>Last Name</ion-label>\n                <ion-input type="text" value="Kumar" readonly></ion-input>\n            </ion-item>\n            <div class="d-flex">\n                <ion-item>\n                    <ion-label floating>Contact Number</ion-label>\n                    <ion-input type="text" value="+91 964 148 6000" readonly></ion-input>\n                </ion-item>\n                <div class="checkmark text-right">\n                    <ion-icon name="ios-checkmark-circle" class="text-green"></ion-icon>\n                </div>\n            </div>\n            <div class="d-flex">\n                <ion-item>\n                    <ion-label floating>Email Address</ion-label>\n                    <ion-input type="text" value="cabber@email.com" readonly></ion-input>\n                </ion-item>\n                <div class="checkmark text-right">\n                    <ion-icon name="ios-close-circle" class="text-red"></ion-icon>\n                </div>\n            </div>\n            <ion-item>\n                <ion-label floating>Password</ion-label>\n                <ion-input type="text" value="* * * * * *" readonly></ion-input>\n            </ion-item>\n        </ion-list>\n    </div>\n</ion-content>\n'/*ion-inline-end:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\profile\profile.html"*/
+            selector: 'page-profile',template:/*ion-inline-start:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/profile/profile.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <div class="top-side">\n        <img src="assets/imgs/menu-bg.png">\n        <div class="icon-box">\n            <ion-icon name="md-create" class="bg-green text-white icon"></ion-icon>\n        </div>\n    </div>\n\n    <div class="form" padding-right padding-left padding-top>\n        <ion-list>\n            <ion-item>\n                <ion-label floating>Fast Name</ion-label>\n                <ion-input type="text" value="Sumit" readonly></ion-input>\n            </ion-item>\n            <ion-item>\n                <ion-label floating>Last Name</ion-label>\n                <ion-input type="text" value="Kumar" readonly></ion-input>\n            </ion-item>\n            <div class="d-flex">\n                <ion-item>\n                    <ion-label floating>Contact Number</ion-label>\n                    <ion-input type="text" value="+91 964 148 6000" readonly></ion-input>\n                </ion-item>\n                <div class="checkmark text-right">\n                    <ion-icon name="ios-checkmark-circle" class="text-green"></ion-icon>\n                </div>\n            </div>\n            <div class="d-flex">\n                <ion-item>\n                    <ion-label floating>Email Address</ion-label>\n                    <ion-input type="text" value="cabber@email.com" readonly></ion-input>\n                </ion-item>\n                <div class="checkmark text-right">\n                    <ion-icon name="ios-close-circle" class="text-red"></ion-icon>\n                </div>\n            </div>\n            <ion-item>\n                <ion-label floating>Password</ion-label>\n                <ion-input type="text" value="* * * * * *" readonly></ion-input>\n            </ion-item>\n        </ion-list>\n    </div>\n</ion-content>\n'/*ion-inline-end:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/profile/profile.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
     ], ProfilePage);
@@ -744,13 +770,13 @@ var ProfilePage = (function () {
 
 /***/ }),
 
-/***/ 216:
+/***/ 275:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MytripsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -769,7 +795,7 @@ var MytripsPage = (function () {
     }
     MytripsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-mytrips',template:/*ion-inline-start:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\mytrips\mytrips.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <ion-title>MY TRIPS</ion-title>\n    </ion-navbar>\n    <div class="bg-green">\n        <ion-segment [(ngModel)]="tab" padding-left padding-right>\n            <ion-segment-button value="past" class="text-white">\n                PAST\n            </ion-segment-button>\n            <ion-segment-button value="upcoming" class="text-white">\n                UPCOMING\n            </ion-segment-button>\n        </ion-segment>\n    </div>\n</ion-header>\n\n<ion-content class="bg-light">\n    <div [ngSwitch]="tab">\n        <ion-list *ngSwitchCase="\'past\'">\n            <ion-card>\n                <div class="img-box">\n                    <img src="assets/imgs/map.png" />\n                </div>\n                <ion-card-content>\n                    <p class="text-black">Today 8:21 am <span style="float:right;">$85 <span class="text-light">-</span> $95 </span>\n                    </p>\n                    <p class="text-light">Suzuki Swift Dezire<span style="float:right;">Cash <span class="text-black">Paid</span></span>\n                    </p>\n                </ion-card-content>\n            </ion-card>\n\n            <ion-card>\n                <div class="img-box">\n                    <img src="assets/imgs/map.png" />\n                </div>\n                <ion-card-content>\n                    <p class="text-black">Today 2:45 pm <span style="float:right;">$65.00</span>\n                    </p>\n                    <p class="text-light">Hyundai xcent<span style="float:right;">Credit Cash <span class="text-black">Paid</span></span>\n                    </p>\n                </ion-card-content>\n            </ion-card>\n\n            <ion-card>\n                <div class="img-box">\n                    <img src="assets/imgs/map.png" />\n                </div>\n                <ion-card-content>\n                    <p class="text-black">Today 2:45 pm <span style="float:right;">$65.00</span>\n                    </p>\n                    <p class="text-light">Hyundai xcent<span style="float:right;">Credit Cash <span class="text-black">Paid</span></span>\n                    </p>\n                </ion-card-content>\n            </ion-card>\n        </ion-list>\n\n        <ion-list *ngSwitchCase="\'upcoming\'">\n            <ion-card>\n                <div class="img-box">\n                    <img src="assets/imgs/map.png" />\n                </div>\n                <ion-card-content>\n                    <p class="text-black">Today 2:45 pm <span style="float:right;">$65.00</span>\n                    </p>\n                    <p class="text-light">Hyundai xcent<span style="float:right;">Credit Cash <span class="text-black">Paid</span></span>\n                    </p>\n                </ion-card-content>\n            </ion-card>\n\n            <ion-card>\n                <div class="img-box">\n                    <img src="assets/imgs/map.png" />\n                </div>\n                <ion-card-content>\n                    <p class="text-black">Today 8:21 am <span style="float:right;">$85 <span class="text-light">-</span> $95 </span>\n                    </p>\n                    <p class="text-light">Suzuki Swift Dezire<span style="float:right;">Cash <span class="text-black">Paid</span></span>\n                    </p>\n                </ion-card-content>\n            </ion-card>\n\n            <ion-card>\n                <div class="img-box">\n                    <img src="assets/imgs/map.png" />\n                </div>\n                <ion-card-content>\n                    <p class="text-black">Today 8:21 am <span style="float:right;">$85 <span class="text-light">-</span> $95 </span>\n                    </p>\n                    <p class="text-light">Suzuki Swift Dezire<span style="float:right;">Cash <span class="text-black">Paid</span></span>\n                    </p>\n                </ion-card-content>\n            </ion-card>\n        </ion-list>\n    </div>\n</ion-content>\n'/*ion-inline-end:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\mytrips\mytrips.html"*/
+            selector: 'page-mytrips',template:/*ion-inline-start:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/mytrips/mytrips.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <ion-title>MY TRIPS</ion-title>\n    </ion-navbar>\n    <div class="bg-green">\n        <ion-segment [(ngModel)]="tab" padding-left padding-right>\n            <ion-segment-button value="past" class="text-white">\n                PAST\n            </ion-segment-button>\n            <ion-segment-button value="upcoming" class="text-white">\n                UPCOMING\n            </ion-segment-button>\n        </ion-segment>\n    </div>\n</ion-header>\n\n<ion-content class="bg-light">\n    <div [ngSwitch]="tab">\n        <ion-list *ngSwitchCase="\'past\'">\n            <ion-card>\n                <div class="img-box">\n                    <img src="assets/imgs/map.png" />\n                </div>\n                <ion-card-content>\n                    <p class="text-black">Today 8:21 am <span style="float:right;">$85 <span class="text-light">-</span> $95 </span>\n                    </p>\n                    <p class="text-light">Suzuki Swift Dezire<span style="float:right;">Cash <span class="text-black">Paid</span></span>\n                    </p>\n                </ion-card-content>\n            </ion-card>\n\n            <ion-card>\n                <div class="img-box">\n                    <img src="assets/imgs/map.png" />\n                </div>\n                <ion-card-content>\n                    <p class="text-black">Today 2:45 pm <span style="float:right;">$65.00</span>\n                    </p>\n                    <p class="text-light">Hyundai xcent<span style="float:right;">Credit Cash <span class="text-black">Paid</span></span>\n                    </p>\n                </ion-card-content>\n            </ion-card>\n\n            <ion-card>\n                <div class="img-box">\n                    <img src="assets/imgs/map.png" />\n                </div>\n                <ion-card-content>\n                    <p class="text-black">Today 2:45 pm <span style="float:right;">$65.00</span>\n                    </p>\n                    <p class="text-light">Hyundai xcent<span style="float:right;">Credit Cash <span class="text-black">Paid</span></span>\n                    </p>\n                </ion-card-content>\n            </ion-card>\n        </ion-list>\n\n        <ion-list *ngSwitchCase="\'upcoming\'">\n            <ion-card>\n                <div class="img-box">\n                    <img src="assets/imgs/map.png" />\n                </div>\n                <ion-card-content>\n                    <p class="text-black">Today 2:45 pm <span style="float:right;">$65.00</span>\n                    </p>\n                    <p class="text-light">Hyundai xcent<span style="float:right;">Credit Cash <span class="text-black">Paid</span></span>\n                    </p>\n                </ion-card-content>\n            </ion-card>\n\n            <ion-card>\n                <div class="img-box">\n                    <img src="assets/imgs/map.png" />\n                </div>\n                <ion-card-content>\n                    <p class="text-black">Today 8:21 am <span style="float:right;">$85 <span class="text-light">-</span> $95 </span>\n                    </p>\n                    <p class="text-light">Suzuki Swift Dezire<span style="float:right;">Cash <span class="text-black">Paid</span></span>\n                    </p>\n                </ion-card-content>\n            </ion-card>\n\n            <ion-card>\n                <div class="img-box">\n                    <img src="assets/imgs/map.png" />\n                </div>\n                <ion-card-content>\n                    <p class="text-black">Today 8:21 am <span style="float:right;">$85 <span class="text-light">-</span> $95 </span>\n                    </p>\n                    <p class="text-light">Suzuki Swift Dezire<span style="float:right;">Cash <span class="text-black">Paid</span></span>\n                    </p>\n                </ion-card-content>\n            </ion-card>\n        </ion-list>\n    </div>\n</ion-content>\n'/*ion-inline-end:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/mytrips/mytrips.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
     ], MytripsPage);
@@ -780,13 +806,13 @@ var MytripsPage = (function () {
 
 /***/ }),
 
-/***/ 217:
+/***/ 276:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReferPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -804,7 +830,7 @@ var ReferPage = (function () {
     }
     ReferPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-refer',template:/*ion-inline-start:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\refer\refer.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <img src="assets/imgs/menu-bg.png">\n    <div padding-left padding-right>\n        <ion-card class="bg-green shadow-green">\n            <ion-card-content text-center>\n                <p class="text-white">Your Referral Code</p>\n                <h6 class="text-white">532461</h6>\n            </ion-card-content>\n        </ion-card>\n        <div padding-left padding-right padding-top>\n            <h4 class="text-green">Refer and earn</h4>\n            <p class="text-drack">Share the referral code with your friends and family members and get 30% off on cab fare</p>\n        </div>\n        <ion-row>\n            <ion-col col-3 text-center padding>\n                <img src="assets/imgs/fb.png">\n            </ion-col>\n            <ion-col col-3 text-center padding padding>\n                <img src="assets/imgs/wpp.png">\n            </ion-col>\n            <ion-col col-3 text-center padding>\n                <img src="assets/imgs/tw.png">\n            </ion-col>\n            <ion-col col-3 text-center padding>\n                <img src="assets/imgs/more.png">\n            </ion-col>\n        </ion-row>\n    </div>\n</ion-content>\n'/*ion-inline-end:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\refer\refer.html"*/
+            selector: 'page-refer',template:/*ion-inline-start:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/refer/refer.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <img src="assets/imgs/menu-bg.png">\n    <div padding-left padding-right>\n        <ion-card class="bg-green shadow-green">\n            <ion-card-content text-center>\n                <p class="text-white">Your Referral Code</p>\n                <h6 class="text-white">532461</h6>\n            </ion-card-content>\n        </ion-card>\n        <div padding-left padding-right padding-top>\n            <h4 class="text-green">Refer and earn</h4>\n            <p class="text-drack">Share the referral code with your friends and family members and get 30% off on cab fare</p>\n        </div>\n        <ion-row>\n            <ion-col col-3 text-center padding>\n                <img src="assets/imgs/fb.png">\n            </ion-col>\n            <ion-col col-3 text-center padding padding>\n                <img src="assets/imgs/wpp.png">\n            </ion-col>\n            <ion-col col-3 text-center padding>\n                <img src="assets/imgs/tw.png">\n            </ion-col>\n            <ion-col col-3 text-center padding>\n                <img src="assets/imgs/more.png">\n            </ion-col>\n        </ion-row>\n    </div>\n</ion-content>\n'/*ion-inline-end:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/refer/refer.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
     ], ReferPage);
@@ -815,13 +841,13 @@ var ReferPage = (function () {
 
 /***/ }),
 
-/***/ 218:
+/***/ 366:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(219);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(240);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(367);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(371);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -829,40 +855,44 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 240:
+/***/ 371:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(282);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_list_list__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_splash_splash__ = __webpack_require__(297);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_login_login__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_settings_settings__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_help_help__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_profile_profile__ = __webpack_require__(215);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_signup_signup__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_verification_verification__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_addcard_addcard__ = __webpack_require__(212);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_referralcode_referralcode__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_location_location__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_choosecab_choosecab__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_schedule_schedule__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_locading_locading__ = __webpack_require__(298);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_bookride_bookride__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_ridefullinfo_ridefullinfo__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_farerate_farerate__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_mytrips_mytrips__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_refer_refer__ = __webpack_require__(217);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__ionic_native_status_bar__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__ionic_native_splash_screen__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__ionic_native_geolocation__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__ionic_native_android_permissions__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__providers_login_login__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(408);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_list_list__ = __webpack_require__(267);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_splash_splash__ = __webpack_require__(415);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_login_login__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_settings_settings__ = __webpack_require__(272);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_help_help__ = __webpack_require__(273);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_profile_profile__ = __webpack_require__(274);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_signup_signup__ = __webpack_require__(269);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_verification_verification__ = __webpack_require__(270);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_addcard_addcard__ = __webpack_require__(271);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_referralcode_referralcode__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_location_location__ = __webpack_require__(256);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_choosecab_choosecab__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_schedule_schedule__ = __webpack_require__(262);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_locading_locading__ = __webpack_require__(416);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_bookride_bookride__ = __webpack_require__(263);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_ridefullinfo_ridefullinfo__ = __webpack_require__(264);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_farerate_farerate__ = __webpack_require__(265);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_mytrips_mytrips__ = __webpack_require__(275);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_refer_refer__ = __webpack_require__(276);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__ionic_native_status_bar__ = __webpack_require__(251);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__ionic_native_splash_screen__ = __webpack_require__(255);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__ionic_native_geolocation__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__ionic_native_android_permissions__ = __webpack_require__(266);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__providers_login_login__ = __webpack_require__(268);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__ionic_native_http__ = __webpack_require__(417);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30_ionic2_auto_complete__ = __webpack_require__(418);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__providers_providers_auto_complete_providers_auto_complete__ = __webpack_require__(257);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__angular_common_http__ = __webpack_require__(259);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -895,6 +925,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
+
+// ionic 2 auto search
 
 
 
@@ -931,6 +966,8 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: []
                 }),
+                __WEBPACK_IMPORTED_MODULE_30_ionic2_auto_complete__["a" /* AutoCompleteModule */],
+                __WEBPACK_IMPORTED_MODULE_32__angular_common_http__["b" /* HttpClientModule */],
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
             entryComponents: [
@@ -962,7 +999,9 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_26__ionic_native_geolocation__["a" /* Geolocation */],
                 __WEBPACK_IMPORTED_MODULE_27__ionic_native_android_permissions__["a" /* AndroidPermissions */],
                 { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] },
-                __WEBPACK_IMPORTED_MODULE_28__providers_login_login__["a" /* LoginProvider */]
+                __WEBPACK_IMPORTED_MODULE_28__providers_login_login__["a" /* LoginProvider */],
+                __WEBPACK_IMPORTED_MODULE_29__ionic_native_http__["a" /* HTTP */],
+                __WEBPACK_IMPORTED_MODULE_31__providers_providers_auto_complete_providers_auto_complete__["a" /* ProvidersAutoCompleteProvider */]
             ]
         })
     ], AppModule);
@@ -973,24 +1012,24 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 282:
+/***/ 408:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_list_list__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_login_login__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_settings_settings__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_help_help__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_profile_profile__ = __webpack_require__(215);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_referralcode_referralcode__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_mytrips_mytrips__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_refer_refer__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(251);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(255);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_list_list__ = __webpack_require__(267);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_login_login__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_settings_settings__ = __webpack_require__(272);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_help_help__ = __webpack_require__(273);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_profile_profile__ = __webpack_require__(274);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_referralcode_referralcode__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_mytrips_mytrips__ = __webpack_require__(275);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_refer_refer__ = __webpack_require__(276);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1080,7 +1119,7 @@ var MyApp = (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\app\app.html"*/'<ion-menu [content]="content">\n    <ion-header>\n        <div class="menu heading">\n            <ion-list>\n                <ion-item menuClose (click)="profilePage()">\n                    <ion-avatar item-start>\n                        <img src="assets/imgs/profile_pix.png">\n                    </ion-avatar>\n                    <h2 class="text-white"><strong>Tarun Kumar</strong></h2>\n                    <p class="text-white">View Profile</p>\n                </ion-item>\n            </ion-list>\n        </div>\n    </ion-header>\n\n    <ion-content class="menu" padding>\n        <ion-list>\n            <ion-item menuClose (click)="homePage()">\n                <ion-avatar item-start>\n                    <ion-icon name="md-navigate" class="text-green"></ion-icon>\n                </ion-avatar>\n                <h2>Home</h2>\n            </ion-item>\n        </ion-list>\n        <ion-list>\n            <ion-item menuClose (click)="mytripsPage()">\n                <ion-avatar item-start>\n                    <ion-icon name="md-car" class="text-green"></ion-icon>\n                </ion-avatar>\n                <h2>My Trips</h2>\n            </ion-item>\n        </ion-list>\n        <ion-list>\n            <ion-item menuClose (click)="settingsPage()">\n                <ion-avatar item-start>\n                    <ion-icon name="md-card" class="text-green"></ion-icon>\n                </ion-avatar>\n                <h2>Payment</h2>\n            </ion-item>\n        </ion-list>\n        <ion-list>\n            <ion-item menuClose (click)="helpPage()">\n                <ion-avatar item-start>\n                    <ion-icon name="md-alert" class="text-green"></ion-icon>\n                </ion-avatar>\n                <h2>Help</h2>\n            </ion-item>\n        </ion-list>\n        <ion-list>\n            <ion-item menuClose (click)="referPage()">\n                <ion-avatar item-start>\n                    <ion-icon name="md-share" class="text-green"></ion-icon>\n                </ion-avatar>\n                <h2>Refer and Earn</h2>\n            </ion-item>\n        </ion-list>\n        <ion-list>\n            <ion-item menuClose (click)="loginPage()">\n                <ion-avatar item-start>\n                    <ion-icon name="md-power" class="text-green"></ion-icon>\n                </ion-avatar>\n                <h2>Logout</h2>\n            </ion-item>\n        </ion-list>\n        <!--\n<ion-list>\n    <ion-item menuClose (click)="referralcodePage()">\n        <ion-avatar item-start>\n        </ion-avatar>\n        <h2>Referral Code</h2>\n    </ion-item>\n</ion-list>\n-->\n    </ion-content>\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n'/*ion-inline-end:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/app/app.html"*/'<ion-menu [content]="content">\n    <ion-header>\n        <div class="menu heading">\n            <ion-list>\n                <ion-item menuClose (click)="profilePage()">\n                    <ion-avatar item-start>\n                        <img src="assets/imgs/profile_pix.png">\n                    </ion-avatar>\n                    <h2 class="text-white"><strong>Tarun Kumar</strong></h2>\n                    <p class="text-white">View Profile</p>\n                </ion-item>\n            </ion-list>\n        </div>\n    </ion-header>\n\n    <ion-content class="menu" padding>\n        <ion-list>\n            <ion-item menuClose (click)="homePage()">\n                <ion-avatar item-start>\n                    <ion-icon name="md-navigate" class="text-green"></ion-icon>\n                </ion-avatar>\n                <h2>Home</h2>\n            </ion-item>\n        </ion-list>\n        <ion-list>\n            <ion-item menuClose (click)="mytripsPage()">\n                <ion-avatar item-start>\n                    <ion-icon name="md-car" class="text-green"></ion-icon>\n                </ion-avatar>\n                <h2>My Trips</h2>\n            </ion-item>\n        </ion-list>\n        <ion-list>\n            <ion-item menuClose (click)="settingsPage()">\n                <ion-avatar item-start>\n                    <ion-icon name="md-card" class="text-green"></ion-icon>\n                </ion-avatar>\n                <h2>Payment</h2>\n            </ion-item>\n        </ion-list>\n        <ion-list>\n            <ion-item menuClose (click)="helpPage()">\n                <ion-avatar item-start>\n                    <ion-icon name="md-alert" class="text-green"></ion-icon>\n                </ion-avatar>\n                <h2>Help</h2>\n            </ion-item>\n        </ion-list>\n        <ion-list>\n            <ion-item menuClose (click)="referPage()">\n                <ion-avatar item-start>\n                    <ion-icon name="md-share" class="text-green"></ion-icon>\n                </ion-avatar>\n                <h2>Refer and Earn</h2>\n            </ion-item>\n        </ion-list>\n        <ion-list>\n            <ion-item menuClose (click)="loginPage()">\n                <ion-avatar item-start>\n                    <ion-icon name="md-power" class="text-green"></ion-icon>\n                </ion-avatar>\n                <h2>Logout</h2>\n            </ion-item>\n        </ion-list>\n        <!--\n<ion-list>\n    <ion-item menuClose (click)="referralcodePage()">\n        <ion-avatar item-start>\n        </ion-avatar>\n        <h2>Referral Code</h2>\n    </ion-item>\n</ion-list>\n-->\n    </ion-content>\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n'/*ion-inline-end:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
@@ -1091,13 +1130,13 @@ var MyApp = (function () {
 
 /***/ }),
 
-/***/ 297:
+/***/ 415:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SplashPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1115,7 +1154,7 @@ var SplashPage = (function () {
     }
     SplashPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-splash',template:/*ion-inline-start:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\splash\splash.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <ion-title>Splash</ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <h3>Ionic Menu Starter</h3>\n\n    <p>\n        If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.\n    </p>\n\n    <button ion-button secondary menuToggle>Toggle Menu</button>\n</ion-content>\n'/*ion-inline-end:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\splash\splash.html"*/
+            selector: 'page-splash',template:/*ion-inline-start:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/splash/splash.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <ion-title>Splash</ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <h3>Ionic Menu Starter</h3>\n\n    <p>\n        If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.\n    </p>\n\n    <button ion-button secondary menuToggle>Toggle Menu</button>\n</ion-content>\n'/*ion-inline-end:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/splash/splash.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
     ], SplashPage);
@@ -1126,13 +1165,13 @@ var SplashPage = (function () {
 
 /***/ }),
 
-/***/ 298:
+/***/ 416:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LocadingPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1150,7 +1189,7 @@ var LocadingPage = (function () {
     }
     LocadingPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-locading',template:/*ion-inline-start:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\locading\locading.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <ion-title>Locadinge</ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <h3>Ionic Menu Starter</h3>\n\n    <p>\n        If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.\n    </p>\n\n    <button ion-button secondary menuToggle>Toggle Menu</button>\n</ion-content>\n'/*ion-inline-end:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\locading\locading.html"*/
+            selector: 'page-locading',template:/*ion-inline-start:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/locading/locading.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <ion-title>Locadinge</ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <h3>Ionic Menu Starter</h3>\n\n    <p>\n        If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.\n    </p>\n\n    <button ion-button secondary menuToggle>Toggle Menu</button>\n</ion-content>\n'/*ion-inline-end:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/locading/locading.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
     ], LocadingPage);
@@ -1161,15 +1200,15 @@ var LocadingPage = (function () {
 
 /***/ }),
 
-/***/ 41:
+/***/ 77:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__location_location__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__location_location__ = __webpack_require__(256);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__ = __webpack_require__(136);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1218,7 +1257,7 @@ var HomePage = (function () {
     ], HomePage.prototype, "mapElement", void 0);
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\home\home.html"*/'<ion-header no-border>\n    <ion-navbar transparent>\n        <button ion-button menuToggle>\n      <ion-icon name="menu" ></ion-icon>\n    </button>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<div #map id="map" class="mymap"></div> \n    <ion-card class="search shadow-black">\n        <ion-card-content (click)="locationPage()">\n            <span class="dot"></span>\n            <ion-searchbar (ionInput)="getItems($event)" placeholder="Where to go?"></ion-searchbar>\n            <ion-icon name="md-locate" class="text-black"></ion-icon>\n        </ion-card-content>\n    </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\SanjayWorkArea\Mumbile\mumbile-app-user\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/home/home.html"*/'<ion-header no-border>\n    <ion-navbar transparent>\n        <button ion-button menuToggle>\n      <ion-icon name="menu" ></ion-icon>\n    </button>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<div #map id="map" class="mymap"></div> \n    <ion-card class="search shadow-black">\n        <ion-card-content (click)="locationPage()">\n            <span class="dot"></span>\n            <ion-searchbar (ionInput)="getItems($event)" placeholder="Where to go?"></ion-searchbar>\n            <ion-icon name="md-locate" class="text-black"></ion-icon>\n        </ion-card-content>\n    </ion-card>\n</ion-content>\n'/*ion-inline-end:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__["a" /* Geolocation */]])
     ], HomePage);
@@ -1229,5 +1268,5 @@ var HomePage = (function () {
 
 /***/ })
 
-},[218]);
+},[366]);
 //# sourceMappingURL=main.js.map
