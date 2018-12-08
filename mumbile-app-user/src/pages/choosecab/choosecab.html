@@ -10,8 +10,16 @@
   
     <!-- auto search start -->
    <div class="autoSuggestBar">
-      <ion-auto-complete [dataProvider]="searchService"></ion-auto-complete>
+      <ion-auto-complete [dataProvider]="searchService" [(ngModel)]="model" (change)="getMobiles()">
+      </ion-auto-complete>
     </div>
+    <!-- <h1>{{model}}</h1> -->
+    <!-- Second search bar -->
+    <div class="autoSuggestBar" *ngIf=isSearch>
+     <ion-auto-complete [dataProvider]="mobileService">
+     </ion-auto-complete>
+    </div>
+
     <!-- auto search end -->
   
   
