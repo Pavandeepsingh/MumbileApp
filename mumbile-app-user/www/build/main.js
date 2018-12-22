@@ -7,8 +7,9 @@ webpackJsonp([0],{
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChoosecabPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_providers_auto_complete_providers_auto_complete__ = __webpack_require__(257);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_providers_auto_complete_providers_auto_complete__ = __webpack_require__(259);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__schedule_schedule__ = __webpack_require__(262);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_providers_mobiles_providers_mobiles__ = __webpack_require__(697);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -22,28 +23,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var ChoosecabPage = (function () {
-    function ChoosecabPage(navCtrl, searchService) {
+    function ChoosecabPage(navCtrl, searchService, mobileService) {
         this.navCtrl = navCtrl;
         this.searchService = searchService;
+        this.mobileService = mobileService;
+        this.model = "";
+        this.isSearch = false;
     }
     ChoosecabPage.prototype.schedulePage = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__schedule_schedule__["a" /* SchedulePage */]);
     };
+    ChoosecabPage.prototype.getMobiles = function () {
+        //cALL API TO GET Mobile list from brand Id
+        if (this.model === '')
+            this.isSearch = false;
+        else
+            this.isSearch = true;
+    };
     ChoosecabPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-choosecab',template:/*ion-inline-start:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/choosecab/choosecab.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n\n    </ion-navbar>\n</ion-header>\n<ion-content class="bg-img">\n  \n    <!-- auto search start -->\n   <div class="autoSuggestBar">\n      <ion-auto-complete [dataProvider]="searchService"></ion-auto-complete>\n    </div>\n    <!-- auto search end -->\n  \n  \n    \n    <!-- <div class="drop">\n        <span class="text-black">Symmit\n                  <ion-icon  padding-left name="ios-arrow-forward"></ion-icon>\n        </span>\n    </div>\n    <div class="pickup">\n        <span class="text-black">Newark\n         <ion-icon  padding-left name="ios-arrow-forward"></ion-icon>\n        </span>\n    </div> -->\n  \n\n  \n    <div class="card-box">\n        <ion-card class="text-black">\n            <ion-card-header>\n\n                <small text-left class="mr-a"> \n                    <ion-icon padding-right name="md-card" class="text-green"></ion-icon>\n                   Cash\n                </small>\n                <span text-center class="mx-a">Choose Cab Type</span>\n                <small text-right class="ml-a">\n                     <ion-icon padding-right name="md-person-add" class=text-green></ion-icon>\n                    1\n                </small>\n            </ion-card-header>\n            <ion-card-content>\n                <div class="cab-scroll bg-white">\n                    <div class="cab-container">\n                        <div class="cab-type">\n                            <div class="img-box">\n                                <img src="assets/imgs/car-1.png">\n                                <ion-badge item-end class="bg-green">2 mins</ion-badge>\n                            </div>\n                            <h4 class="text-black ">GoShare</h4>\n                            <small class="text-light ">$45 - $50</small>\n                        </div>\n                        <div class="cab-type">\n                            <div class="img-box active">\n                                <img src="assets/imgs/car-1.png">\n                                <ion-badge item-end class="bg-green">2 mins</ion-badge>\n                            </div>\n                            <h4 class="text-black ">GoMeOnly</h4>\n                            <small class="text-light ">$45 - $50</small>\n                        </div>\n                        <div class="cab-type ">\n                            <div class="img-box">\n                                <img src="assets/imgs/car-1.png">\n                                <ion-badge item-end class="bg-green">2 mins</ion-badge>\n                            </div>\n                            <h4 class="text-black ">GoBigger</h4>\n                            <small class="text-light ">$45 - $50</small>\n                        </div>\n                        <div class="cab-type ">\n                            <div class="img-box">\n                                <img src="assets/imgs/car-1.png">\n                                <ion-badge item-end class="bg-green">2 mins</ion-badge>\n                            </div>\n                            <h4 class="text-black">GoFast</h4>\n                            <small class="text-light ">$45 - $50</small>\n                        </div>\n                        <div class="cab-type ">\n                            <div class="img-box">\n                                <img src="assets/imgs/car-1.png">\n                                <ion-badge item-end class="bg-green">2 mins</ion-badge>\n                            </div>\n                            <h4 class="text-black ">GoShare</h4>\n                            <small class="text-light ">$45 - $50</small>\n                        </div>\n                    </div>\n                </div>\n                <ion-row padding-left padding-right>\n                    <ion-col col-2>\n                        <button ion-button full class="bg-green  shadow-green full"> <ion-icon name="md-time"></ion-icon></button>\n                    </ion-col>\n                    <ion-col col-10>\n                        <button ion-button full class="bg-green shadow-green full" (click)="schedulePage()">REQUEST CAB</button>\n                    </ion-col>\n                </ion-row>\n\n            </ion-card-content>\n        </ion-card>\n    </div>\n</ion-content>\n'/*ion-inline-end:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/choosecab/choosecab.html"*/
+            selector: 'page-choosecab',template:/*ion-inline-start:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/choosecab/choosecab.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n\n    </ion-navbar>\n</ion-header>\n<ion-content class="bg-img">\n  \n    <!-- auto search start -->\n   <div class="autoSuggestBar">\n      <ion-auto-complete [dataProvider]="searchService" [(ngModel)]="model" (change)="getMobiles()">\n      </ion-auto-complete>\n    </div>\n    <!-- <h1>{{model}}</h1> -->\n    <!-- Second search bar -->\n    <div class="autoSuggestBar" *ngIf=isSearch>\n     <ion-auto-complete [dataProvider]="mobileService">\n     </ion-auto-complete>\n    </div>\n\n    <!-- auto search end -->\n  \n  \n    \n    <!-- <div class="drop">\n        <span class="text-black">Symmit\n                  <ion-icon  padding-left name="ios-arrow-forward"></ion-icon>\n        </span>\n    </div>\n    <div class="pickup">\n        <span class="text-black">Newark\n         <ion-icon  padding-left name="ios-arrow-forward"></ion-icon>\n        </span>\n    </div> -->\n  \n\n  \n    <div class="card-box">\n        <ion-card class="text-black">\n            <ion-card-header>\n\n                <small text-left class="mr-a"> \n                    <ion-icon padding-right name="md-card" class="text-green"></ion-icon>\n                   Cash\n                </small>\n                <span text-center class="mx-a">Choose Cab Type</span>\n                <small text-right class="ml-a">\n                     <ion-icon padding-right name="md-person-add" class=text-green></ion-icon>\n                    1\n                </small>\n            </ion-card-header>\n            <ion-card-content>\n                <div class="cab-scroll bg-white">\n                    <div class="cab-container">\n                        <div class="cab-type">\n                            <div class="img-box">\n                                <img src="assets/imgs/car-1.png">\n                                <ion-badge item-end class="bg-green">2 mins</ion-badge>\n                            </div>\n                            <h4 class="text-black ">GoShare</h4>\n                            <small class="text-light ">$45 - $50</small>\n                        </div>\n                        <div class="cab-type">\n                            <div class="img-box active">\n                                <img src="assets/imgs/car-1.png">\n                                <ion-badge item-end class="bg-green">2 mins</ion-badge>\n                            </div>\n                            <h4 class="text-black ">GoMeOnly</h4>\n                            <small class="text-light ">$45 - $50</small>\n                        </div>\n                        <div class="cab-type ">\n                            <div class="img-box">\n                                <img src="assets/imgs/car-1.png">\n                                <ion-badge item-end class="bg-green">2 mins</ion-badge>\n                            </div>\n                            <h4 class="text-black ">GoBigger</h4>\n                            <small class="text-light ">$45 - $50</small>\n                        </div>\n                        <div class="cab-type ">\n                            <div class="img-box">\n                                <img src="assets/imgs/car-1.png">\n                                <ion-badge item-end class="bg-green">2 mins</ion-badge>\n                            </div>\n                            <h4 class="text-black">GoFast</h4>\n                            <small class="text-light ">$45 - $50</small>\n                        </div>\n                        <div class="cab-type ">\n                            <div class="img-box">\n                                <img src="assets/imgs/car-1.png">\n                                <ion-badge item-end class="bg-green">2 mins</ion-badge>\n                            </div>\n                            <h4 class="text-black ">GoShare</h4>\n                            <small class="text-light ">$45 - $50</small>\n                        </div>\n                    </div>\n                </div>\n                <ion-row padding-left padding-right>\n                    <ion-col col-2>\n                        <button ion-button full class="bg-green  shadow-green full"> <ion-icon name="md-time"></ion-icon></button>\n                    </ion-col>\n                    <ion-col col-10>\n                        <button ion-button full class="bg-green shadow-green full" (click)="schedulePage()">REQUEST CAB</button>\n                    </ion-col>\n                </ion-row>\n\n            </ion-card-content>\n        </ion-card>\n    </div>\n</ion-content>\n'/*ion-inline-end:"/home/dev/Desktop/mumbile app/MumbileApp/mumbile-app-user/src/pages/choosecab/choosecab.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_providers_auto_complete_providers_auto_complete__["a" /* ProvidersAutoCompleteProvider */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__providers_providers_auto_complete_providers_auto_complete__["a" /* ProvidersAutoCompleteProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_providers_auto_complete_providers_auto_complete__["a" /* ProvidersAutoCompleteProvider */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__providers_providers_mobiles_providers_mobiles__["a" /* ProvidersMobilesProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_providers_mobiles_providers_mobiles__["a" /* ProvidersMobilesProvider */]) === "function" && _c || Object])
     ], ChoosecabPage);
     return ChoosecabPage;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=choosecab.js.map
 
 /***/ }),
 
-/***/ 141:
+/***/ 143:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -93,7 +106,7 @@ var LoginPage = (function () {
 
 /***/ }),
 
-/***/ 142:
+/***/ 144:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -137,7 +150,7 @@ var ReferralcodePage = (function () {
 
 /***/ }),
 
-/***/ 167:
+/***/ 169:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -150,11 +163,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 167;
+webpackEmptyAsyncContext.id = 169;
 
 /***/ }),
 
-/***/ 211:
+/***/ 213:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -167,11 +180,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 211;
+webpackEmptyAsyncContext.id = 213;
 
 /***/ }),
 
-/***/ 256:
+/***/ 258:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -244,15 +257,15 @@ var LocationPage = (function () {
 
 /***/ }),
 
-/***/ 257:
+/***/ 259:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProvidersAutoCompleteProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__ = __webpack_require__(258);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__ = __webpack_require__(138);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(259);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(139);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -262,7 +275,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-//import { Http } from '@angular/http';
 
 
 
@@ -280,10 +292,9 @@ var ProvidersAutoCompleteProvider = (function () {
     };
     ProvidersAutoCompleteProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]])
     ], ProvidersAutoCompleteProvider);
     return ProvidersAutoCompleteProvider;
-    var _a;
 }());
 
 //# sourceMappingURL=providers-auto-complete.js.map
@@ -541,7 +552,7 @@ var LoginProvider = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__verification_verification__ = __webpack_require__(270);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_login__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_login__ = __webpack_require__(143);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -626,7 +637,7 @@ var VerificationPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(77);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__referralcode_referralcode__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__referralcode_referralcode__ = __webpack_require__(144);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -867,15 +878,15 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(77);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_list_list__ = __webpack_require__(267);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_splash_splash__ = __webpack_require__(415);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_login_login__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_login_login__ = __webpack_require__(143);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_settings_settings__ = __webpack_require__(272);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_help_help__ = __webpack_require__(273);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_profile_profile__ = __webpack_require__(274);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_signup_signup__ = __webpack_require__(269);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_verification_verification__ = __webpack_require__(270);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_addcard_addcard__ = __webpack_require__(271);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_referralcode_referralcode__ = __webpack_require__(142);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_location_location__ = __webpack_require__(256);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_referralcode_referralcode__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_location_location__ = __webpack_require__(258);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_choosecab_choosecab__ = __webpack_require__(137);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_schedule_schedule__ = __webpack_require__(262);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_locading_locading__ = __webpack_require__(416);
@@ -884,15 +895,16 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_farerate_farerate__ = __webpack_require__(265);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_mytrips_mytrips__ = __webpack_require__(275);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_refer_refer__ = __webpack_require__(276);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__ionic_native_status_bar__ = __webpack_require__(251);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__ionic_native_splash_screen__ = __webpack_require__(255);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__ionic_native_status_bar__ = __webpack_require__(253);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__ionic_native_splash_screen__ = __webpack_require__(257);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__ionic_native_geolocation__ = __webpack_require__(136);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__ionic_native_android_permissions__ = __webpack_require__(266);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__providers_login_login__ = __webpack_require__(268);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__ionic_native_http__ = __webpack_require__(417);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_30_ionic2_auto_complete__ = __webpack_require__(418);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__providers_providers_auto_complete_providers_auto_complete__ = __webpack_require__(257);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__angular_common_http__ = __webpack_require__(259);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__providers_providers_auto_complete_providers_auto_complete__ = __webpack_require__(259);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__angular_common_http__ = __webpack_require__(139);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__providers_providers_mobiles_providers_mobiles__ = __webpack_require__(697);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -930,6 +942,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 // ionic 2 auto search
+
 
 
 
@@ -1001,7 +1014,8 @@ var AppModule = (function () {
                 { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] },
                 __WEBPACK_IMPORTED_MODULE_28__providers_login_login__["a" /* LoginProvider */],
                 __WEBPACK_IMPORTED_MODULE_29__ionic_native_http__["a" /* HTTP */],
-                __WEBPACK_IMPORTED_MODULE_31__providers_providers_auto_complete_providers_auto_complete__["a" /* ProvidersAutoCompleteProvider */]
+                __WEBPACK_IMPORTED_MODULE_31__providers_providers_auto_complete_providers_auto_complete__["a" /* ProvidersAutoCompleteProvider */],
+                __WEBPACK_IMPORTED_MODULE_33__providers_providers_mobiles_providers_mobiles__["a" /* ProvidersMobilesProvider */]
             ]
         })
     ], AppModule);
@@ -1019,15 +1033,15 @@ var AppModule = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(251);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(255);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(253);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(257);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(77);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_list_list__ = __webpack_require__(267);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_login_login__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_login_login__ = __webpack_require__(143);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_settings_settings__ = __webpack_require__(272);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_help_help__ = __webpack_require__(273);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_profile_profile__ = __webpack_require__(274);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_referralcode_referralcode__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_referralcode_referralcode__ = __webpack_require__(144);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_mytrips_mytrips__ = __webpack_require__(275);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_refer_refer__ = __webpack_require__(276);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1200,6 +1214,51 @@ var LocadingPage = (function () {
 
 /***/ }),
 
+/***/ 697:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProvidersMobilesProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(139);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var ProvidersMobilesProvider = (function () {
+    function ProvidersMobilesProvider(http) {
+        this.http = http;
+        this.labelAttribute = "name";
+    }
+    ProvidersMobilesProvider.prototype.getResults = function (keyword) {
+        console.log('get Result for auto complete');
+        return this.http.get("https://restcountries.eu/rest/v1/name/" + keyword)
+            .map(function (result) {
+            return result.filter(function (item) { return item.name.toLowerCase().startsWith(keyword.toLowerCase()); });
+        });
+    };
+    ProvidersMobilesProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
+    ], ProvidersMobilesProvider);
+    return ProvidersMobilesProvider;
+    var _a;
+}());
+
+//# sourceMappingURL=providers-mobiles.js.map
+
+/***/ }),
+
 /***/ 77:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1207,7 +1266,7 @@ var LocadingPage = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__location_location__ = __webpack_require__(256);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__location_location__ = __webpack_require__(258);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__ = __webpack_require__(136);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;

@@ -34,6 +34,7 @@ import { HTTP } from '@ionic-native/http';
 import { AutoCompleteModule } from 'ionic2-auto-complete';
 import { ProvidersAutoCompleteProvider } from '../providers/providers-auto-complete/providers-auto-complete';
 import { HttpClientModule } from '@angular/common/http';
+import { ProvidersMobilesProvider } from '../providers/providers-mobiles/providers-mobiles';
 
 
 @NgModule({
@@ -99,7 +100,8 @@ import { HttpClientModule } from '@angular/common/http';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     LoginProvider,
     HTTP,
-    ProvidersAutoCompleteProvider
+    ProvidersAutoCompleteProvider,
+    ProvidersMobilesProvider
   ]
 })
 export class AppModule {}
