@@ -1,29 +1,29 @@
 <ion-header>
     <ion-navbar>
         <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
+            <ion-icon name="menu"></ion-icon>
+        </button>
 
     </ion-navbar>
 </ion-header>
 <ion-content class="bg-img">
-  
+
     <!-- auto search start -->
-   <div class="autoSuggestBar">
-      <ion-auto-complete [dataProvider]="searchService" [(ngModel)]="model" (change)="getMobiles()">
-      </ion-auto-complete>
+    <div class="autoSuggestBar">
+        <ion-auto-complete [dataProvider]="brandAutoCompleteDataProvider" [(ngModel)]="model" (change)="getMobiles()">
+        </ion-auto-complete>
     </div>
     <!-- <h1>{{model}}</h1> -->
     <!-- Second search bar -->
     <div class="autoSuggestBar" *ngIf=isSearch>
-     <ion-auto-complete [dataProvider]="mobileService">
-     </ion-auto-complete>
+        <ion-auto-complete>
+        </ion-auto-complete>
     </div>
 
     <!-- auto search end -->
-  
-  
-    
+
+
+
     <!-- <div class="drop">
         <span class="text-black">Symmit
                   <ion-icon  padding-left name="ios-arrow-forward"></ion-icon>
@@ -34,20 +34,20 @@
          <ion-icon  padding-left name="ios-arrow-forward"></ion-icon>
         </span>
     </div> -->
-  
 
-  
+
+
     <div class="card-box">
         <ion-card class="text-black">
             <ion-card-header>
 
-                <small text-left class="mr-a"> 
+                <small text-left class="mr-a">
                     <ion-icon padding-right name="md-card" class="text-green"></ion-icon>
-                   Cash
+                    Cash
                 </small>
-                <span text-center class="mx-a">Choose Cab Type</span>
+                <span text-center class="mx-a">Choose Issue Type</span>
                 <small text-right class="ml-a">
-                     <ion-icon padding-right name="md-person-add" class=text-green></ion-icon>
+                    <ion-icon padding-right name="md-person-add" class=text-green></ion-icon>
                     1
                 </small>
             </ion-card-header>
@@ -98,7 +98,9 @@
                 </div>
                 <ion-row padding-left padding-right>
                     <ion-col col-2>
-                        <button ion-button full class="bg-green  shadow-green full"> <ion-icon name="md-time"></ion-icon></button>
+                        <button ion-button full class="bg-green  shadow-green full">
+                            <ion-icon name="md-time"></ion-icon>
+                        </button>
                     </ion-col>
                     <ion-col col-10>
                         <button ion-button full class="bg-green shadow-green full" (click)="schedulePage()">REQUEST CAB</button>

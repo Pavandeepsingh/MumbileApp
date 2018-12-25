@@ -1,3 +1,9 @@
+import { BrandServices } from './../services/brand.service';
+import { BrandAutoCompleteProvider } from './../providers/brand-providers/brand.autocomplete.providers';
+import { URLConstants } from './../services/constants';
+import { ConsoleLoggerService } from './../services/console-logger.service';
+import { BaseService } from './../services/base.service';
+import { MobilesProvider } from './../providers/mobiles-providers/mobiles.provider';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -32,9 +38,8 @@ import { LoginProvider } from '../providers/login/login';
 import { HTTP } from '@ionic-native/http';
 // ionic 2 auto search
 import { AutoCompleteModule } from 'ionic2-auto-complete';
-import { ProvidersAutoCompleteProvider } from '../providers/providers-auto-complete/providers-auto-complete';
 import { HttpClientModule } from '@angular/common/http';
-import { ProvidersMobilesProvider } from '../providers/providers-mobiles/providers-mobiles';
+import { LoggerService } from '../services/logger.service';
 
 
 @NgModule({
@@ -53,21 +58,21 @@ import { ProvidersMobilesProvider } from '../providers/providers-mobiles/provide
     LocationPage,
     ChoosecabPage,
     SchedulePage,
-   LocadingPage,
-   BookridePage,
-   RidefullinfoPage,
-   FareratePage,
-   MytripsPage,
-   ReferPage,
-   AddcardPage
+    LocadingPage,
+    BookridePage,
+    RidefullinfoPage,
+    FareratePage,
+    MytripsPage,
+    ReferPage,
+    AddcardPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AutoCompleteModule,
     HttpClientModule,
-       // for auto search in choose page
-  ], 
+    // for auto search in choose page
+  ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
@@ -87,21 +92,26 @@ import { ProvidersMobilesProvider } from '../providers/providers-mobiles/provide
     LocadingPage,
     BookridePage,
     RidefullinfoPage,
-   FareratePage,
-   MytripsPage,
-   ReferPage,
-   AddcardPage
+    FareratePage,
+    MytripsPage,
+    ReferPage,
+    AddcardPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-	Geolocation,
-	AndroidPermissions,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Geolocation,
+    AndroidPermissions,
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     LoginProvider,
     HTTP,
-    ProvidersAutoCompleteProvider,
-    ProvidersMobilesProvider
+    LoggerService,
+    URLConstants,
+    ConsoleLoggerService,
+    BaseService,
+    MobilesProvider,
+    BrandAutoCompleteProvider,
+    BrandServices
   ]
 })
-export class AppModule {}
+export class AppModule { }
