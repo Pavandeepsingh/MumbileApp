@@ -14,6 +14,7 @@ export class URLConstants {
     this.URLs = {
       GETBRANDS: this.ApiURL + '/rest/v1/name/a',
       GETMOBILES: this.ApiURL + '/rest/v1/name/a',
+      GETMOBILEREPAIRFEES: this.ApiURL + '/rest/v1/name/a',
     };
   }
 }

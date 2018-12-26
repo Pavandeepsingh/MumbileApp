@@ -1,9 +1,11 @@
+import { MobileRepairFeesProvider } from './../providers/mobiles-providers/mobileRepairFees.provider';
+import { MobileService } from './../services/mobile.service';
+import { MobilesAutoCompleteProvider } from './../providers/mobiles-providers/mobiles.autocomplete.provider';
 import { BrandServices } from './../services/brand.service';
 import { BrandAutoCompleteProvider } from './../providers/brand-providers/brand.autocomplete.providers';
 import { URLConstants } from './../services/constants';
 import { ConsoleLoggerService } from './../services/console-logger.service';
 import { BaseService } from './../services/base.service';
-import { MobilesProvider } from './../providers/mobiles-providers/mobiles.provider';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -109,9 +111,11 @@ import { LoggerService } from '../services/logger.service';
     URLConstants,
     ConsoleLoggerService,
     BaseService,
-    MobilesProvider,
+    MobilesAutoCompleteProvider,
     BrandAutoCompleteProvider,
-    BrandServices
+    BrandServices,
+    MobileService,
+    MobileRepairFeesProvider,
   ]
 })
 export class AppModule { }

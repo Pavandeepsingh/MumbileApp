@@ -10,13 +10,15 @@
 
     <!-- auto search start -->
     <div class="autoSuggestBar">
-        <ion-auto-complete [dataProvider]="brandAutoCompleteDataProvider" [(ngModel)]="model" (change)="getMobiles()">
+        <ion-auto-complete [options]="{ placeholder : 'Select Brand : Samsung' }" [(ngModel)]="brand" (itemSelected)="onSelectMobileBrand()"
+            [dataProvider]="brandAutoCompleteDataProvider">
         </ion-auto-complete>
     </div>
     <!-- <h1>{{model}}</h1> -->
     <!-- Second search bar -->
-    <div class="autoSuggestBar" *ngIf=isSearch>
-        <ion-auto-complete>
+    <div class="autoSuggestBar" *ngIf="showMobileAutoSearch">
+        <ion-auto-complete [options]="{ placeholder : 'Select Mobile : Samsung J2' }" [(ngModel)]="mobile"
+            (itemSelected)="onSelectMobile(mobile)" [dataProvider]="mobileAutoCompleteDataProvider">
         </ion-auto-complete>
     </div>
 
@@ -41,36 +43,36 @@
         <ion-card class="text-black">
             <ion-card-header>
 
-                <small text-left class="mr-a">
+                <!-- <small text-left class="mr-a">
                     <ion-icon padding-right name="md-card" class="text-green"></ion-icon>
-                    Cash
-                </small>
+                    Cash On Repair
+                </small> -->
                 <span text-center class="mx-a">Choose Issue Type</span>
-                <small text-right class="ml-a">
+                <!-- <small text-right class="ml-a">
                     <ion-icon padding-right name="md-person-add" class=text-green></ion-icon>
                     1
-                </small>
+                </small> -->
             </ion-card-header>
             <ion-card-content>
                 <div class="cab-scroll bg-white">
                     <div class="cab-container">
-                        <div class="cab-type">
-                            <div class="img-box">
+                        <div class="cab-type" *ngFor="let mobileRepairFee of mobileRepairFeesProvider.MobileRepairFees">
+                            <div class="(mobileRepairFee.IsActive===true?'img-box active': 'img-box')" (click)="onSelectIssueType(mobileRepairFee)">
                                 <img src="assets/imgs/car-1.png">
-                                <ion-badge item-end class="bg-green">2 mins</ion-badge>
+                                <!-- <ion-badge item-end class="bg-green">2 mins</ion-badge> -->
                             </div>
-                            <h4 class="text-black ">GoShare</h4>
-                            <small class="text-light ">$45 - $50</small>
+                            <h4 class="text-black " [innerText]="mobileRepairFee.MobileFaultName"></h4>
+                            <small class="text-light" [innerText]="(mobileRepairFee.IsActive===true?'img-box ': 'img-box active')"></small>
                         </div>
-                        <div class="cab-type">
+                        <!-- <div class="cab-type">
                             <div class="img-box active">
                                 <img src="assets/imgs/car-1.png">
                                 <ion-badge item-end class="bg-green">2 mins</ion-badge>
                             </div>
                             <h4 class="text-black ">GoMeOnly</h4>
                             <small class="text-light ">$45 - $50</small>
-                        </div>
-                        <div class="cab-type ">
+                        </div> -->
+                        <!-- <div class="cab-type ">
                             <div class="img-box">
                                 <img src="assets/imgs/car-1.png">
                                 <ion-badge item-end class="bg-green">2 mins</ion-badge>
@@ -93,17 +95,22 @@
                             </div>
                             <h4 class="text-black ">GoShare</h4>
                             <small class="text-light ">$45 - $50</small>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <ion-row padding-left padding-right>
-                    <ion-col col-2>
+                    <!-- <ion-col col-2>
                         <button ion-button full class="bg-green  shadow-green full">
                             <ion-icon name="md-time"></ion-icon>
                         </button>
+                    </ion-col> -->
+                    <ion-col col-6>
+                        <button ion-button full class="bg-green shadow-green full" (click)="schedulePage()">
+                            REPAIR LATER</button>
                     </ion-col>
-                    <ion-col col-10>
-                        <button ion-button full class="bg-green shadow-green full" (click)="schedulePage()">REQUEST CAB</button>
+                    <ion-col col-6>
+                        <button ion-button full class="bg-green shadow-green full" (click)="schedulePage()">
+                            REPAIR NOW</button>
                     </ion-col>
                 </ion-row>
 

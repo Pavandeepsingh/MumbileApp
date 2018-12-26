@@ -35,7 +35,7 @@ export class BaseService {
     };
     let data: any;
     return this.httpClient.get(url, httpOptions).pipe(
-      tap((response: any) => { data = response, console.log("baseService get data returned.") }),
+      tap((response: any) => { data = response, console.log("baseService get data returned. ") }),
       catchError(this.handleError<any>('base service get', 'error')));
   };
 

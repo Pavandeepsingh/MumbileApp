@@ -7,6 +7,7 @@ import 'rxjs/add/operator/map'
 export class BrandAutoCompleteProvider implements AutoCompleteService {
 
   labelAttribute = "BrandName";
+  formValueAttribute = "";
 
   constructor(private brandService: BrandServices) { }
 
