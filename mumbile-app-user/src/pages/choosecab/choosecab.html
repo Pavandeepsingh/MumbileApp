@@ -3,11 +3,12 @@
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
-
     </ion-navbar>
 </ion-header>
-<ion-content class="bg-img">
-
+<ion-content>
+    <div #map id="map" class="mymap">
+        <img src="assets/imgs/marker.png" class="centerMarkerImg" />
+    </div>
     <!-- auto search start -->
     <div class="autoSuggestBar">
         <ion-auto-complete [options]="{ placeholder : 'Select Brand : Samsung' }" [(ngModel)]="brand" (itemSelected)="onSelectMobileBrand()"
@@ -21,6 +22,7 @@
             (itemSelected)="onSelectMobile(mobile)" [dataProvider]="mobileAutoCompleteDataProvider">
         </ion-auto-complete>
     </div>
+    <!--third search start-->
 
     <!-- auto search end -->
 
@@ -57,7 +59,7 @@
                 <div class="cab-scroll bg-white">
                     <div class="cab-container">
                         <div class="cab-type" *ngFor="let mobileRepairFee of mobileRepairFeesProvider.MobileRepairFees">
-                            <div class="(mobileRepairFee.IsActive===true?'img-box active': 'img-box')" (click)="onSelectIssueType(mobileRepairFee)">
+                            <div [ngClass]="(mobileRepairFee.IsActive===true)?'img-box active': 'img-box'" (click)="onSelectIssueType(mobileRepairFee)">
                                 <img src="assets/imgs/car-1.png">
                                 <!-- <ion-badge item-end class="bg-green">2 mins</ion-badge> -->
                             </div>

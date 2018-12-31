@@ -1,3 +1,4 @@
+import { DriverAutoCompleteProvider } from './../providers/mobiles-providers/Driver.autocomplete.provider';
 import { MobileRepairFeesProvider } from './../providers/mobiles-providers/mobileRepairFees.provider';
 import { MobileService } from './../services/mobile.service';
 import { MobilesAutoCompleteProvider } from './../providers/mobiles-providers/mobiles.autocomplete.provider';
@@ -9,6 +10,7 @@ import { BaseService } from './../services/base.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -39,10 +41,9 @@ import { AndroidPermissions } from '@ionic-native/android-permissions';
 import { LoginProvider } from '../providers/login/login';
 import { HTTP } from '@ionic-native/http';
 // ionic 2 auto search
-import { AutoCompleteModule } from 'ionic2-auto-complete';
+import { AutoCompleteModule, } from 'ionic2-auto-complete';
 import { HttpClientModule } from '@angular/common/http';
 import { LoggerService } from '../services/logger.service';
-
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { LoggerService } from '../services/logger.service';
     FareratePage,
     MytripsPage,
     ReferPage,
-    AddcardPage
+    AddcardPage,
+
   ],
   imports: [
     BrowserModule,
@@ -115,7 +117,7 @@ import { LoggerService } from '../services/logger.service';
     BrandAutoCompleteProvider,
     BrandServices,
     MobileService,
-    MobileRepairFeesProvider,
+    MobileRepairFeesProvider
   ]
 })
 export class AppModule { }

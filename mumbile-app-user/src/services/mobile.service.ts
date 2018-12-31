@@ -2,9 +2,9 @@ import { MobileRepairFee } from './../models/mobileRepairFee';
 import { Mobile } from './../models/mobile';
 import { Injectable } from '@angular/core';
 import { BaseService } from './base.service';
-import { Brand } from './../models/brand';
 import { Observable } from "rxjs/Observable";
 import { URLConstants } from './constants';
+
 
 @Injectable()
 export class MobileService {

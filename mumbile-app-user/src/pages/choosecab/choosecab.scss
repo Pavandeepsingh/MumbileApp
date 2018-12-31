@@ -7,7 +7,7 @@ page-choosecab {
         top: 0;
         bottom: 0;
         left: 0;
-        right: 0;
+        right: 0; 
     }
     .header .toolbar-background {
         background: transparent !important;
@@ -98,8 +98,8 @@ page-choosecab {
                     display: inline-block;
                     white-space: nowrap;
                     .img-box {
-                        width: 65px;
-                        height: 65px;
+                        width: 50px;
+                        height: 50px;
                         margin-bottom: 20px;
                         text-align: center;
                         margin: auto;
@@ -175,4 +175,27 @@ page-choosecab {
      display: flex;
      justify-content: center;
     }
+
+    .my-map{
+        position: fixed;
+        z-index: -1 !important;
+        background: none !important;
+        width: 100% !important;
+        height: 100% !important;
+        top: 0 !important;
+        left: 0 !important;
+    }
+    
+    #centerMarkerImage {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom:0;
+        margin: auto;
+        width: 32px; // image width
+        height: 24px; // image height
+        z-index: 1;
+        display: block !important;
+      }
 }
