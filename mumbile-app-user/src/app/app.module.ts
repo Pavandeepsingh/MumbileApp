@@ -1,4 +1,3 @@
-import { DriverAutoCompleteProvider } from './../providers/mobiles-providers/Driver.autocomplete.provider';
 import { MobileRepairFeesProvider } from './../providers/mobiles-providers/mobileRepairFees.provider';
 import { MobileService } from './../services/mobile.service';
 import { MobilesAutoCompleteProvider } from './../providers/mobiles-providers/mobiles.autocomplete.provider';

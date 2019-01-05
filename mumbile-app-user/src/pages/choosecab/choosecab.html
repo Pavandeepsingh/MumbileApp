@@ -17,16 +17,12 @@
     </div>
     <!-- <h1>{{model}}</h1> -->
     <!-- Second search bar -->
-    <div class="autoSuggestBar" *ngIf="showMobileAutoSearch">
+    <div class="autoSuggestBar">
         <ion-auto-complete [options]="{ placeholder : 'Select Mobile : Samsung J2' }" [(ngModel)]="mobile"
             (itemSelected)="onSelectMobile(mobile)" [dataProvider]="mobileAutoCompleteDataProvider">
         </ion-auto-complete>
     </div>
-    <!--third search start-->
-
-    <!-- auto search end -->
-
-
+    
 
     <!-- <div class="drop">
         <span class="text-black">Symmit
